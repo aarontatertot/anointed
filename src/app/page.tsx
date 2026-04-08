@@ -169,11 +169,11 @@ export default function Home() {
         </div>
 
         {/* Tagline + pill buttons — stacks on mobile */}
-        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center px-9 pb-9 pt-6">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center px-9 pt-6" style={{ paddingBottom: "96px" }}>
           <p style={{
-            fontFamily: "'Roboto', sans-serif",
-            fontWeight: 400,
-            fontSize: "14px",
+            fontFamily: "'Roboto Mono', monospace",
+            fontWeight: 500,
+            fontSize: "22px",
             color: "#A1A1AA",
             lineHeight: 1,
           }}>
@@ -274,7 +274,7 @@ export default function Home() {
             <p style={{
               fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
-              fontSize: "14px",
+              fontSize: "22px",
               color: "#A1A1AA",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
@@ -357,8 +357,8 @@ export default function Home() {
         </h2>
 
         <p style={{
-          fontFamily: "'Roboto', sans-serif",
-          fontWeight: 400,
+          fontFamily: "'Roboto Mono', monospace",
+          fontWeight: 500,
           fontSize: "16px",
           color: "#A1A1AA",
           marginBottom: "48px",
@@ -580,8 +580,8 @@ export default function Home() {
                 marginBottom: "16px",
               }}>{artist.role}</p>
               <p style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 400,
+                fontFamily: "'Roboto Mono', monospace",
+                fontWeight: 500,
                 fontSize: "15px",
                 color: "#A1A1AA",
                 lineHeight: 1.6,
@@ -767,9 +767,9 @@ export default function Home() {
               ANOINTED
             </p>
             <p style={{
-              fontFamily: "'Roboto', sans-serif",
-              fontWeight: 400,
-              fontSize: "14px",
+              fontFamily: "'Roboto Mono', monospace",
+              fontWeight: 500,
+              fontSize: "22px",
               color: "#A1A1AA",
               lineHeight: 1.6,
             }}>
@@ -801,9 +801,9 @@ export default function Home() {
                     href="#"
                     style={{
                       display: "block",
-                      fontFamily: "'Roboto', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "14px",
+                      fontFamily: "'Roboto Mono', monospace",
+                      fontWeight: 500,
+                      fontSize: "22px",
                       color: "#A1A1AA",
                       marginBottom: "10px",
                       textDecoration: "none",
