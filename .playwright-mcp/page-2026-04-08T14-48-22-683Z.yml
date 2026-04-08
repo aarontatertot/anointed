@@ -1,0 +1,220 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "NEIGHBORHOOD" [level=1] [ref=e3]:
+      - link "NEIGHBORHOOD" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "NEIGHBORHOOD" [ref=e5]
+    - generic [ref=e7]:
+      - button "Search" [ref=e8] [cursor=pointer]:
+        - img "Search" [ref=e9]
+      - textbox "SEARCH" [ref=e10]
+    - navigation [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e14] [cursor=pointer]: BRANDS
+        - generic [ref=e16] [cursor=pointer]: CATEGORIES
+        - link "COLLECTION" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+        - link "LOOK" [ref=e18] [cursor=pointer]:
+          - /url: "#"
+        - link "DEALERS" [ref=e19] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=e20]: "|"
+        - link "LOGIN" [ref=e21] [cursor=pointer]:
+          - /url: "#"
+        - link "CART(0)" [ref=e22] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - img "NEIGHBORHOOD collection" [ref=e28]
+          - listitem [ref=e29]:
+            - img "NEIGHBORHOOD collection" [ref=e30]
+          - listitem [ref=e31]:
+            - img "NEIGHBORHOOD collection" [ref=e32]
+        - generic [ref=e33]: NEW ARRIVALS
+        - generic [ref=e34]: NEIGHBORHOOD | INFINITE ARCHIVES
+        - generic [ref=e35]: VIEW MORE
+      - generic [ref=e37]:
+        - heading "NEIGHBORHOOD" [level=2] [ref=e38]
+        - paragraph [ref=e39]: NEIGHBORHOOD founded in 1994 in Harajuku Tokyo. “Craft with Pride”.
+        - generic [ref=e40]: VIEW MORE
+      - generic [ref=e41]:
+        - heading "SRL" [level=2] [ref=e42]
+        - generic [ref=e43]: VIEW MORE
+      - generic [ref=e44]:
+        - heading "ONE THIRD (kids)" [level=2] [ref=e45]
+        - generic [ref=e46]: VIEW MORE
+    - generic [ref=e47]:
+      - generic [ref=e48]: NEW ARRIVALS
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - link "NH X INFINITE ARCHIVES . SAVAGE HOMBRE CHECK SHIRT LS NH X INFINITE ARCHIVES . SAVAGE HOMBRE CHECK SHIRT LS alternate view INFINITE ARCHIVES SOLD OUT" [ref=e51] [cursor=pointer]:
+            - /url: /products/1
+            - generic [ref=e52]:
+              - img "NH X INFINITE ARCHIVES . SAVAGE HOMBRE CHECK SHIRT LS" [ref=e54]
+              - img "NH X INFINITE ARCHIVES . SAVAGE HOMBRE CHECK SHIRT LS alternate view" [ref=e55]
+              - generic [ref=e56]: INFINITE ARCHIVES
+              - generic [ref=e57]: SOLD OUT
+          - paragraph [ref=e58]: NEIGHBORHOOD
+          - paragraph [ref=e59]: NH X INFINITE ARCHIVES . SAVAGE HOMBRE CHECK SHIRT LS
+          - paragraph [ref=e60]:
+            - generic [ref=e61]: $362.00
+        - generic [ref=e62]:
+          - link "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS alternate view" [ref=e63] [cursor=pointer]:
+            - /url: /products/2
+            - generic [ref=e64]:
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS" [ref=e66]
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS alternate view" [ref=e67]
+          - paragraph [ref=e68]: NEIGHBORHOOD
+          - paragraph [ref=e69]: NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS
+          - paragraph [ref=e70]:
+            - generic [ref=e71]: $174.00
+        - generic [ref=e72]:
+          - link "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS alternate view" [ref=e73] [cursor=pointer]:
+            - /url: /products/3
+            - generic [ref=e74]:
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS" [ref=e76]
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS alternate view" [ref=e77]
+          - paragraph [ref=e78]: NEIGHBORHOOD
+          - paragraph [ref=e79]: NEIGHBORHOOD . INFINITE ARCHIVES . CUT SEW LS
+          - paragraph [ref=e80]:
+            - generic [ref=e81]: $158.00
+        - generic [ref=e82]:
+          - link "NEIGHBORHOOD . INFINITE ARCHIVES . CAP NEIGHBORHOOD . INFINITE ARCHIVES . CAP alternate view" [ref=e83] [cursor=pointer]:
+            - /url: /products/4
+            - generic [ref=e84]:
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CAP" [ref=e86]
+              - img "NEIGHBORHOOD . INFINITE ARCHIVES . CAP alternate view" [ref=e87]
+          - paragraph [ref=e88]: NEIGHBORHOOD
+          - paragraph [ref=e89]: NEIGHBORHOOD . INFINITE ARCHIVES . CAP
+          - paragraph [ref=e90]:
+            - generic [ref=e91]: $46.00
+        - generic [ref=e92]:
+          - link "NEIGHBORHOOD . RIDER JKT NEIGHBORHOOD . RIDER JKT alternate view" [ref=e93] [cursor=pointer]:
+            - /url: /products/5
+            - generic [ref=e94]:
+              - img "NEIGHBORHOOD . RIDER JKT" [ref=e96]
+              - img "NEIGHBORHOOD . RIDER JKT alternate view" [ref=e97]
+          - paragraph [ref=e98]: NEIGHBORHOOD
+          - paragraph [ref=e99]: NEIGHBORHOOD . RIDER JKT
+          - paragraph [ref=e100]:
+            - generic [ref=e101]: $556.00
+        - generic [ref=e102]:
+          - link "NEIGHBORHOOD . V-PULLOVER NEIGHBORHOOD . V-PULLOVER alternate view" [ref=e103] [cursor=pointer]:
+            - /url: /products/6
+            - generic [ref=e104]:
+              - img "NEIGHBORHOOD . V-PULLOVER" [ref=e106]
+              - img "NEIGHBORHOOD . V-PULLOVER alternate view" [ref=e107]
+          - paragraph [ref=e108]: NEIGHBORHOOD
+          - paragraph [ref=e109]: NEIGHBORHOOD . V-PULLOVER
+          - paragraph [ref=e110]:
+            - generic [ref=e111]: $174.00
+        - generic [ref=e112]:
+          - link "NEIGHBORHOOD . EASY TROUSERS NEIGHBORHOOD . EASY TROUSERS alternate view" [ref=e113] [cursor=pointer]:
+            - /url: /products/7
+            - generic [ref=e114]:
+              - img "NEIGHBORHOOD . EASY TROUSERS" [ref=e116]
+              - img "NEIGHBORHOOD . EASY TROUSERS alternate view" [ref=e117]
+          - paragraph [ref=e118]: NEIGHBORHOOD
+          - paragraph [ref=e119]: NEIGHBORHOOD . EASY TROUSERS
+          - paragraph [ref=e120]:
+            - generic [ref=e121]: $174.00
+        - generic [ref=e122]:
+          - link "NEIGHBORHOOD . CHECK SHIRT SS" [ref=e123] [cursor=pointer]:
+            - /url: /products/8
+            - img "NEIGHBORHOOD . CHECK SHIRT SS" [ref=e126]
+          - paragraph [ref=e127]: NEIGHBORHOOD
+          - paragraph [ref=e128]: NEIGHBORHOOD . CHECK SHIRT SS
+          - paragraph [ref=e129]:
+            - generic [ref=e130]: $198.00
+      - generic [ref=e131]:
+        - generic [ref=e132]: PREV
+        - generic [ref=e133]:
+          - generic [ref=e134]: "1"
+          - link "2" [ref=e135] [cursor=pointer]:
+            - /url: "?page=2"
+          - link "3" [ref=e136] [cursor=pointer]:
+            - /url: "?page=3"
+          - generic [ref=e137]: …
+          - generic [ref=e138]: "6"
+        - link "NEXT" [ref=e139] [cursor=pointer]:
+          - /url: "?page=2"
+  - contentinfo [ref=e140]:
+    - generic [ref=e141]:
+      - list [ref=e142]:
+        - listitem [ref=e143]:
+          - link "HOME" [ref=e144] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e145]: BRANDS
+        - listitem [ref=e146]:
+          - link "ALL BRANDS" [ref=e147] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e148]:
+          - link "NEIGHBORHOOD" [ref=e149] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e150]:
+          - link "SRL" [ref=e151] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e152]:
+          - link "ONE THIRD(KIDS)" [ref=e153] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=e154]:
+        - listitem [ref=e155]: CATEGORIES
+        - listitem [ref=e156]:
+          - link "JACKETS" [ref=e157] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e158]:
+          - link "SHIRTS" [ref=e159] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e160]:
+          - link "KNIT / CUT SEWN" [ref=e161] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e162]:
+          - link "T-SHIRTS" [ref=e163] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e164]:
+          - link "BOTTOMS" [ref=e165] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e166]:
+          - link "HEADWEAR / BAGS" [ref=e167] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e168]:
+          - link "ACCESSORIES" [ref=e169] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=e170]:
+        - listitem [ref=e171]:
+          - link "COLLECTION" [ref=e172] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e173]:
+          - link "LOOK" [ref=e174] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=e175]:
+        - listitem [ref=e176]:
+          - link "DEALERS" [ref=e177] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=e178]:
+        - listitem [ref=e179]: SNS
+        - listitem [ref=e180]:
+          - link "NEIGHBORHOOD → Instagram" [ref=e181] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e182]:
+          - link "SRL → Instagram" [ref=e183] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e184]:
+          - link "NEIGHBORHOOD → Facebook" [ref=e185] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e186]:
+          - link "VIMEO" [ref=e187] [cursor=pointer]:
+            - /url: "#"
+      - list [ref=e188]:
+        - listitem [ref=e189]: NEWSLETTER
+        - listitem [ref=e190]:
+          - generic [ref=e191]:
+            - textbox "Email address" [ref=e192]
+            - button "→" [ref=e193] [cursor=pointer]
+    - generic [ref=e194]: © 2025 NEIGHBORHOOD
+  - button "Open Next.js Dev Tools" [ref=e200] [cursor=pointer]:
+    - img [ref=e201]
+  - alert [ref=e204]

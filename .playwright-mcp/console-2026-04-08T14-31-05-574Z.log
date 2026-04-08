@@ -1,0 +1,14 @@
+[    1435ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://r1.dotdigital-pages.com/p/7LUO-1DL#https://www.neighborhood.jp/en:0
+[    1512ms] [LOG] Consentmo -> customerPrivacy loaded from loadFeatures @ https://cdn.shopify.com/extensions/019d5297-6fa2-7be7-849f-e0c106d10bee/consentmo-gdpr-696/assets/consentmo_cookie_consent.js:0
+[    2296ms] [LOG] Consentmo - customerPrivacy loaded after loadFeatures @ https://cdn.shopify.com/extensions/019d5297-6fa2-7be7-849f-e0c106d10bee/consentmo-gdpr-696/assets/consentmo_cookie_consent.js:0
+[    2661ms] [LOG] Oxi Social Login Initialized @ https://social-login.oxiapps.com/api/init?vt=928382&shop=neighborhood-web-store.myshopify.com:19
+[   31550ms] [LOG] FONTPLUS Timeout abort javascript @ https://webfont.fontplus.jp/accessor/script/fontplus.js?QRNXi79t53c%3D&box=e~Ft9p20zzw%3D&timeout=30&aa=1&ab=2:11
+[   56422ms] [LOG] analytics: true marketing: true functionality: true @ https://cdn.shopify.com/extensions/019d5297-6fa2-7be7-849f-e0c106d10bee/consentmo-gdpr-696/assets/consentmo_cookie_consent.js:0
+[   56522ms] [ERROR] Shopify's Google Analytics stub called with: [create, UA-44128185-1, Object] 
+See https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information. @ https://www.neighborhood.jp/en:638
+[   56523ms] [ERROR] Shopify's Google Analytics stub called with: [] 
+See https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information. @ https://www.neighborhood.jp/en:638
+[   56523ms] [ERROR] Shopify's Google Analytics stub called with: [gtag_UA_44128185_1.set, Object] 
+See https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information. @ https://www.neighborhood.jp/en:638
+[   56523ms] [ERROR] Shopify's Google Analytics stub called with: [gtag_UA_44128185_1.send, pageview, Object] 
+See https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information. @ https://www.neighborhood.jp/en:638
