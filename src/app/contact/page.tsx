@@ -1,15 +1,15 @@
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+
 export default function ContactPage() {
   return (
     <div style={{ background: "#18181B", color: "#fff", minHeight: "100vh" }}>
 
       {/* Nav */}
-      <nav style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "28px 36px",
-      }}>
-        <div style={{ display: "flex", gap: "32px" }}>
+      <nav
+        style={{ display: "flex", alignItems: "center", padding: "28px 36px" }}
+        className="justify-end md:justify-between"
+      >
+        <div className="hidden md:flex" style={{ gap: "32px" }}>
           {[
             { label: "HOME", href: "/" },
             { label: "ABOUT", href: "/about" },
@@ -35,7 +35,9 @@ export default function ContactPage() {
           ))}
         </div>
         <a
-          href="/book"
+          href={GENERAL_BOOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,
@@ -53,14 +55,9 @@ export default function ContactPage() {
         </a>
       </nav>
 
-      {/* Two-column section */}
+      {/* Two-column section — stacks on mobile */}
       <section style={{ padding: "40px 36px 80px" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "60px",
-          alignItems: "flex-start",
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
           {/* Left column */}
           <div>
@@ -232,8 +229,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Google Maps embed */}
-      <section style={{ padding: "0 36px 80px" }}>
+      {/* Google Maps embed — full width on mobile */}
+      <section className="px-4 md:px-9 pb-20">
         <div style={{
           border: "1px solid #27272A",
           padding: "8px",
@@ -252,7 +249,7 @@ export default function ContactPage() {
 
       {/* Footer */}
       <footer style={{ background: "#18181B", padding: "60px 36px 32px", borderTop: "1px solid #27272A" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "20px" }}>
+        <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
           <p style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 900,

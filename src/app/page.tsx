@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { useState } from "react";
 
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+const DONOVAN_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/donavan-duelas-55/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+const ADLEY_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/adley-prescott-2/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -80,7 +84,7 @@ export default function Home() {
 
             {/* Book Now CTA */}
             <a
-              href="https://squire.com"
+              href={GENERAL_BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -101,19 +105,12 @@ export default function Home() {
           </div>
         )}
 
-        {/* Nav */}
-        <nav style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "28px 36px",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 10,
-        }}>
-          <div style={{ display: "flex", gap: "24px", flexWrap: "nowrap" }}>
+        {/* Nav — items hidden on mobile, MENU always visible on right */}
+        <nav
+          style={{ display: "flex", alignItems: "center", padding: "28px 36px", position: "absolute", top: 0, left: 0, right: 0, zIndex: 10 }}
+          className="justify-end md:justify-between"
+        >
+          <div className="hidden md:flex" style={{ gap: "24px" }}>
             {[
               { label: "HOME", href: "#home" },
               { label: "ABOUT", href: "#about" },
@@ -156,12 +153,7 @@ export default function Home() {
               padding: 0,
             }}
           >
-            <span style={{
-              display: "inline-block",
-              width: "12px",
-              height: "12px",
-              background: "#fff",
-            }} />
+            <span style={{ display: "inline-block", width: "12px", height: "12px", background: "#fff" }} />
             MENU
           </button>
         </nav>
@@ -176,28 +168,42 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* Tagline + pill buttons */}
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "24px 36px 36px",
-        }}>
+        {/* Tagline + pill buttons — stacks on mobile */}
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center px-9 pb-9 pt-6">
           <p style={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
             fontSize: "14px",
             color: "#A1A1AA",
-            whiteSpace: "nowrap",
             lineHeight: 1,
           }}>
             A home for precision, artistry, and the style that defines you
           </p>
-          <div style={{ display: "flex", gap: "10px" }}>
-            {["BOOK NOW", "GALLERY", "SERVICES"].map((label) => (
+          <div className="flex gap-2 flex-wrap">
+            <a
+              href={GENERAL_BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "'Roboto Mono', monospace",
+                fontWeight: 500,
+                fontSize: "12px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#D4D4D8",
+                border: "1px solid #A1A1AA",
+                borderRadius: "40px",
+                padding: "8px 20px",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              BOOK NOW
+            </a>
+            {["GALLERY", "SERVICES"].map((label) => (
               <a
                 key={label}
-                href={`#${label.toLowerCase().replace(" ", "-")}`}
+                href={`#${label.toLowerCase()}`}
                 style={{
                   fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 500,
@@ -218,8 +224,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Full-bleed portrait */}
-        <div style={{ flex: 1, position: "relative", height: "600px" }}>
+        {/* Full-bleed portrait — responsive height */}
+        <div style={{ flex: 1, position: "relative" }} className="min-h-[260px] sm:min-h-[400px] md:min-h-[600px]">
           <Image
             src="/images/studio/barber-chairs-wide.jpg"
             alt="Anointed hair studio"
@@ -248,8 +254,8 @@ export default function Home() {
           ABOUT ANOINTED
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: "40px" }}>
-          {/* Giant left text */}
+        {/* Stacks on mobile, side-by-side on desktop */}
+        <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-end">
           <h2 style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 900,
@@ -259,7 +265,6 @@ export default function Home() {
             lineHeight: 1,
             letterSpacing: "-0.02em",
             whiteSpace: "pre-line",
-            flexShrink: 0,
           }}>
             {"ABOUT\nANOINTED"}
           </h2>
@@ -300,7 +305,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 3: YELLOW MARQUEE ───────────────────────────────────── */}
+      {/* ── SECTION 3: MARQUEE ───────────────────────────────────────────── */}
       <section style={{
         background: "#819A91",
         padding: "64px 36px",
@@ -310,12 +315,11 @@ export default function Home() {
         <p style={{
           fontFamily: "'Inter', sans-serif",
           fontWeight: 900,
-          fontSize: "clamp(48px, 8vw, 96px)",
+          fontSize: "clamp(32px, 6vw, 96px)",
           textTransform: "uppercase",
           color: "#18181B",
           lineHeight: 1,
           letterSpacing: "-0.02em",
-          whiteSpace: "nowrap",
         }}>
           CRAFT THAT CONNECTS — STYLE THAT MATTERS.
         </p>
@@ -363,8 +367,8 @@ export default function Home() {
           From precision cuts to transformative color work, every service is delivered with intention.
         </p>
 
-        {/* Service cards */}
-        <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+        {/* Service cards — 1 col on mobile, 3 on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { name: "CUT", price: "Starting at $75", image: "/images/studio/barber-chairs-wide.jpg" },
             { name: "COLOR", price: "Starting at $120", image: "/images/studio/portrait-street.jpg" },
@@ -374,11 +378,8 @@ export default function Home() {
               key={service.name}
               style={{
                 position: "relative",
-                width: "384px",
                 height: "520px",
                 overflow: "hidden",
-                flex: "1 1 300px",
-                maxWidth: "384px",
               }}
             >
               <Image
@@ -423,89 +424,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 5: TESTIMONIALS ─────────────────────────────────────── */}
-      <section style={{ background: "#18181B", padding: "80px 36px" }}>
-        <div style={{ display: "flex", gap: "60px", alignItems: "flex-start", flexWrap: "wrap" }}>
-          {/* Image left */}
-          <div style={{ position: "relative", width: "660px", height: "528px", flexShrink: 0 }}>
-            <Image
-              src="/images/studio/portrait-street.jpg"
-              alt="Client"
-              fill
-              style={{ objectFit: "cover", filter: "grayscale(100%)" }}
-            />
-          </div>
-
-          {/* Right column */}
-          <div style={{ flex: 1, minWidth: "280px", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: "20px" }}>
-            <div style={{
-              display: "inline-block",
-              background: "#fff",
-              color: "#18181B",
-              fontFamily: "'Roboto Mono', monospace",
-              fontWeight: 500,
-              fontSize: "11px",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              padding: "6px 12px",
-              marginBottom: "28px",
-              alignSelf: "flex-start",
-            }}>
-              CLIENT STORIES
-            </div>
-
-            <h2 style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(40px, 5vw, 60px)",
-              textTransform: "uppercase",
-              color: "#fff",
-              lineHeight: 1,
-              letterSpacing: "-0.02em",
-              marginBottom: "32px",
-            }}>
-              CLIENT STORIES
-            </h2>
-
-            <blockquote style={{
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 600,
-              fontSize: "22px",
-              color: "#fff",
-              lineHeight: 1.4,
-              marginBottom: "28px",
-            }}>
-              &ldquo;Every session is a conversation. Every cut, a statement. Anointed doesn&apos;t just style hair — they shape confidence.&rdquo;
-            </blockquote>
-
-            <div>
-              <p style={{
-                fontFamily: "'Roboto Mono', monospace",
-                fontWeight: 500,
-                fontSize: "13px",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "#fff",
-              }}>
-                JESSICA M.
-              </p>
-              <p style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 400,
-                fontSize: "14px",
-                color: "#A1A1AA",
-                marginTop: "4px",
-              }}>
-                Regular Client
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 6: YELLOW SHOWCASE ──────────────────────────────────── */}
+      {/* ── SECTION 5: GALLERY SHOWCASE ─────────────────────────────────── */}
       <section style={{ background: "#819A91", padding: "80px 36px", overflow: "hidden" }}>
-        <div style={{ display: "flex", gap: "60px", alignItems: "flex-start" }}>
+        <div className="flex flex-col gap-8 md:flex-row md:gap-16 md:items-start">
           {/* Left */}
           <div style={{ flex: 1 }}>
             <h2 style={{
@@ -533,15 +454,17 @@ export default function Home() {
           </div>
 
           {/* Right floating card */}
-          <div style={{
-            background: "#FAFAF9",
-            padding: "40px",
-            width: "340px",
-            flexShrink: 0,
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}>
+          <div
+            style={{
+              background: "#FAFAF9",
+              padding: "40px",
+              flexShrink: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+            }}
+            className="w-full md:w-[340px]"
+          >
             {[
               { label: "Editorial Cut", image: "/images/studio/barber-chairs-wide.jpg" },
               { label: "Color Transform", image: "/images/studio/portrait-street.jpg" },
@@ -579,8 +502,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 7: BOOK ─────────────────────────────────────────────── */}
-
       {/* ─── TEAM SECTION ─── */}
       <section id="team" style={{ background: "#18181B", padding: "80px 36px" }}>
         <div style={{
@@ -609,25 +530,23 @@ export default function Home() {
         }}>
           MEET THE<br />TEAM
         </h2>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "40px",
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
               name: "DONOVAN",
-              role: "MASTER BARBER",
+              role: "BARBER · COLOR SPECIALIST",
               bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
               image: "/images/studio/barber-chair-single.jpg",
               bookLabel: "BOOK WITH DONOVAN",
+              bookHref: DONOVAN_BOOK_URL,
             },
             {
               name: "ADLEY",
-              role: "COLOR SPECIALIST",
+              role: "BARBER",
               bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
               image: "/images/studio/portrait-street.jpg",
               bookLabel: "BOOK WITH ADLEY",
+              bookHref: ADLEY_BOOK_URL,
             },
           ].map((artist) => (
             <div key={artist.name}>
@@ -670,7 +589,7 @@ export default function Home() {
                 maxWidth: "360px",
               }}>{artist.bio}</p>
               <a
-                href="https://squire.com"
+                href={artist.bookHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -694,9 +613,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SECTION 7: BOOK ─────────────────────────────────────────────── */}
       <section id="book" style={{ background: "#18181B", padding: "80px 36px 0" }}>
         {/* Top: left label + right body */}
-        <div style={{ display: "flex", gap: "60px", marginBottom: "60px", flexWrap: "wrap" }}>
+        <div className="flex flex-col gap-8 md:flex-row md:gap-16 mb-16">
           <div style={{ flex: 1, minWidth: "200px" }}>
             <div style={{
               display: "inline-block",
@@ -725,7 +645,26 @@ export default function Home() {
               Never miss the appointment that changes everything. Book your next session and experience the Anointed difference.
             </p>
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              {["SQUIRE", "CALL US", "INSTAGRAM"].map((label) => (
+              <a
+                href={GENERAL_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: "'Roboto Mono', monospace",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "#D4D4D8",
+                  border: "1px solid #A1A1AA",
+                  borderRadius: "40px",
+                  padding: "10px 24px",
+                  textDecoration: "none",
+                }}
+              >
+                SQUIRE
+              </a>
+              {["CALL US", "INSTAGRAM"].map((label) => (
                 <a
                   key={label}
                   href="#"
@@ -749,8 +688,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Giant split text with image */}
-        <div style={{ display: "flex", alignItems: "center", overflow: "hidden" }}>
+        {/* Giant split text — desktop only (would overflow on mobile) */}
+        <div className="hidden md:flex items-center overflow-hidden">
           <span style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 900,
@@ -794,12 +733,27 @@ export default function Home() {
             APPOINTMENT
           </span>
         </div>
+
+        {/* Mobile-only: stacked large text */}
+        <div className="md:hidden overflow-hidden pb-8">
+          <p style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 900,
+            fontSize: "clamp(48px, 14vw, 96px)",
+            textTransform: "uppercase",
+            color: "#D4D4D8",
+            lineHeight: 1.05,
+            letterSpacing: "-0.03em",
+          }}>
+            BOOK YOUR<br />APPOINTMENT
+          </p>
+        </div>
       </section>
 
       {/* ── SECTION 8: FOOTER ───────────────────────────────────────────── */}
       <footer style={{ background: "#18181B", padding: "80px 36px 0" }}>
-        {/* Top row */}
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "60px", flexWrap: "wrap", gap: "40px" }}>
+        {/* Top row — stacks on mobile */}
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between mb-16">
           {/* Tagline */}
           <div style={{ maxWidth: "400px" }}>
             <p style={{
@@ -879,15 +833,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Bottom bar */}
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "20px 0",
-          borderTop: "1px solid #27272A",
-          marginTop: "8px",
-        }}>
+        {/* Bottom bar — stacks on mobile */}
+        <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center py-5 border-t border-zinc-800 mt-2">
           <p style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,

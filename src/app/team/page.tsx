@@ -1,20 +1,26 @@
 import Image from "next/image";
 
+const DONOVAN_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/donavan-duelas-55/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+const ADLEY_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/adley-prescott-2/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+
 export default function TeamPage() {
   const team = [
     {
       image: "/images/studio/barber-chair-single.jpg",
       name: "DONOVAN",
-      role: "MASTER BARBER",
+      role: "BARBER · COLOR SPECIALIST",
       bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
       bookLabel: "BOOK WITH DONOVAN",
+      bookHref: DONOVAN_BOOK_URL,
     },
     {
       image: "/images/studio/barber-chairs-wide.jpg",
       name: "ADLEY",
-      role: "COLOR SPECIALIST",
+      role: "BARBER",
       bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
       bookLabel: "BOOK WITH ADLEY",
+      bookHref: ADLEY_BOOK_URL,
     },
   ];
 
@@ -22,13 +28,11 @@ export default function TeamPage() {
     <div style={{ background: "#18181B", color: "#fff", minHeight: "100vh" }}>
 
       {/* Nav */}
-      <nav style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "28px 36px",
-      }}>
-        <div style={{ display: "flex", gap: "32px" }}>
+      <nav
+        style={{ display: "flex", alignItems: "center", padding: "28px 36px" }}
+        className="justify-end md:justify-between"
+      >
+        <div className="hidden md:flex" style={{ gap: "32px" }}>
           {[
             { label: "HOME", href: "/" },
             { label: "ABOUT", href: "/#about" },
@@ -53,7 +57,9 @@ export default function TeamPage() {
           ))}
         </div>
         <a
-          href="/book"
+          href={GENERAL_BOOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,
@@ -104,12 +110,8 @@ export default function TeamPage() {
           {"MEET THE\nTEAM"}
         </h1>
 
-        {/* Two profile cards */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "32px",
-        }}>
+        {/* Two profile cards — 1 col on mobile, 2 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {team.map((person) => (
             <div key={person.name}>
               {/* Portrait image */}
@@ -163,7 +165,7 @@ export default function TeamPage() {
 
               {/* Booking link */}
               <a
-                href="https://squire.com"
+                href={person.bookHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -190,7 +192,7 @@ export default function TeamPage() {
 
       {/* Footer */}
       <footer style={{ background: "#18181B", padding: "60px 36px 32px", borderTop: "1px solid #27272A" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "20px" }}>
+        <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
           <p style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 900,

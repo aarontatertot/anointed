@@ -1,17 +1,17 @@
 import Image from "next/image";
 
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+
 export default function HomeV2Page() {
   return (
     <div style={{ background: "#18181B", color: "#fff", minHeight: "100vh" }}>
 
       {/* ── NAV ──────────────────────────────────────────────────────────── */}
-      <nav style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "28px 36px",
-      }}>
-        <div style={{ display: "flex", gap: "32px" }}>
+      <nav
+        style={{ display: "flex", alignItems: "center", padding: "28px 36px" }}
+        className="justify-end md:justify-between"
+      >
+        <div className="hidden md:flex" style={{ gap: "32px" }}>
           {[
             { label: "HOME", href: "/" },
             { label: "HOME V.2", href: "/home-v2" },
@@ -37,7 +37,9 @@ export default function HomeV2Page() {
           ))}
         </div>
         <a
-          href="/book"
+          href={GENERAL_BOOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,
@@ -57,12 +59,7 @@ export default function HomeV2Page() {
 
       {/* ── SECTION 1: HERO ──────────────────────────────────────────────── */}
       <section style={{ padding: "40px 36px 80px" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "48px",
-          alignItems: "center",
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left: tagline */}
           <div>
             <p style={{
@@ -206,98 +203,7 @@ export default function HomeV2Page() {
         ))}
       </section>
 
-      {/* ── SECTION 4: CLIENT STORIES ────────────────────────────────────── */}
-      <section style={{ padding: "80px 36px" }}>
-        {/* Label */}
-        <div style={{
-          display: "inline-block",
-          background: "#fff",
-          color: "#18181B",
-          fontFamily: "'Roboto Mono', monospace",
-          fontWeight: 500,
-          fontSize: "11px",
-          letterSpacing: "0.15em",
-          textTransform: "uppercase",
-          padding: "6px 12px",
-          marginBottom: "48px",
-        }}>
-          CLIENT STORIES
-        </div>
-
-        <h2 style={{
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 900,
-          fontSize: "clamp(52px, 8vw, 100px)",
-          textTransform: "uppercase",
-          color: "#fff",
-          lineHeight: 1,
-          letterSpacing: "-0.02em",
-          marginBottom: "48px",
-        }}>
-          CLIENT STORIES
-        </h2>
-
-        {/* Two testimonial cards */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "24px",
-        }}>
-          {[
-            {
-              quote: "Every session is a conversation. Every cut, a statement. Anointed doesn't just style hair — they shape confidence.",
-              name: "JESSICA M.",
-              role: "Regular Client",
-            },
-            {
-              quote: "I walked in not knowing what I wanted. I walked out feeling like myself for the first time in years. That's the Anointed difference.",
-              name: "DEREK T.",
-              role: "Regular Client",
-            },
-          ].map((t) => (
-            <div
-              key={t.name}
-              style={{
-                background: "#1F1F23",
-                border: "1px solid #27272A",
-                padding: "40px 36px",
-              }}
-            >
-              <blockquote style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 600,
-                fontSize: "20px",
-                color: "#fff",
-                lineHeight: 1.5,
-                marginBottom: "28px",
-              }}>
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <p style={{
-                fontFamily: "'Roboto Mono', monospace",
-                fontWeight: 500,
-                fontSize: "12px",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "#fff",
-              }}>
-                {t.name}
-              </p>
-              <p style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 400,
-                fontSize: "13px",
-                color: "#A1A1AA",
-                marginTop: "4px",
-              }}>
-                {t.role}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SECTION 5: LATEST SERVICES SHOWCASE ─────────────────────────── */}
+      {/* ── SECTION 4: LATEST SERVICES SHOWCASE ─────────────────────────── */}
       <section style={{ padding: "0 36px 80px" }}>
         {/* Label */}
         <div style={{
@@ -385,7 +291,9 @@ export default function HomeV2Page() {
               </p>
             </div>
             <a
-              href="/book"
+              href={GENERAL_BOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
@@ -407,7 +315,7 @@ export default function HomeV2Page() {
         ))}
       </section>
 
-      {/* ── SECTION 6: BOOK CTA ──────────────────────────────────────────── */}
+      {/* ── SECTION 5: BOOK CTA ──────────────────────────────────────────── */}
       <section style={{ background: "#819A91", padding: "80px 36px", textAlign: "center" }}>
         <p style={{
           fontFamily: "'Roboto Mono', monospace",
@@ -433,7 +341,7 @@ export default function HomeV2Page() {
           BOOK YOUR SESSION
         </h2>
         <a
-          href="https://squire.com"
+          href={GENERAL_BOOK_URL}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -456,7 +364,7 @@ export default function HomeV2Page() {
 
       {/* ── FOOTER ───────────────────────────────────────────────────────── */}
       <footer style={{ background: "#18181B", padding: "80px 36px 0" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "60px", flexWrap: "wrap", gap: "40px" }}>
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between mb-16">
           <div style={{ maxWidth: "400px" }}>
             <p style={{
               fontFamily: "'Inter', sans-serif",
@@ -567,14 +475,7 @@ export default function HomeV2Page() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "20px 0",
-          borderTop: "1px solid #27272A",
-          marginTop: "8px",
-        }}>
+        <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center py-5 border-t border-zinc-800 mt-2">
           <p style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,
