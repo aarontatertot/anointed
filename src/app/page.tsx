@@ -166,8 +166,11 @@ export default function Home() {
           </button>
         </nav>
 
-        {/* Giant headline with logo */}
-        <div className="px-9 pt-40 md:pt-44">
+        {/* Nav spacer — pushes content below the absolute nav */}
+        <div style={{ height: "80px" }} />
+
+        {/* Giant headline */}
+        <div className="px-9 pt-8">
           <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
           </h1>
