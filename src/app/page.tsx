@@ -167,7 +167,7 @@ export default function Home() {
         </nav>
 
         {/* Giant headline with logo */}
-        <div className="px-9 pt-32 md:pt-36">
+        <div className="px-9 pt-40 md:pt-44">
           <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
           </h1>
@@ -183,10 +183,10 @@ export default function Home() {
           <p style={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,
-            fontSize: "16px",
+            fontSize: "14px",
             color: "#A1A1AA",
-            maxWidth: "400px",
-            lineHeight: 1.5,
+            whiteSpace: "nowrap",
+            lineHeight: 1,
           }}>
             A home for precision, artistry, and the style that defines you
           </p>
