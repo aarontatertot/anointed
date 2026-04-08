@@ -177,7 +177,7 @@ export default function Home() {
             color: "#A1A1AA",
             lineHeight: 1,
           }}>
-            A home for precision, artistry, and the style that defines you
+            Equipped with belief.
           </p>
           <div className="flex gap-2 flex-wrap">
             <a
@@ -321,7 +321,7 @@ export default function Home() {
           lineHeight: 1,
           letterSpacing: "-0.02em",
         }}>
-          CRAFT THAT CONNECTS — STYLE THAT MATTERS.
+          EQUIPPED WITH BELIEF.
         </p>
       </section>
 
@@ -773,7 +773,7 @@ export default function Home() {
               color: "#A1A1AA",
               lineHeight: 1.6,
             }}>
-              A home for precision, artistry, and the style that defines you.
+              Equipped with belief.
             </p>
           </div>
 
