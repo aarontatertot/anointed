@@ -123,7 +123,7 @@ export default function Home() {
         {/* Full-bleed portrait */}
         <div style={{ flex: 1, position: "relative", height: "600px" }}>
           <Image
-            src="/images/hero-slide-01.jpg"
+            src="/images//images/studio/barber-chairs-wide.jpg"
             alt="Anointed hair studio"
             fill
             style={{ objectFit: "cover", objectPosition: "top", filter: "grayscale(100%)" }}
@@ -204,7 +204,7 @@ export default function Home() {
 
       {/* ── SECTION 3: YELLOW MARQUEE ───────────────────────────────────── */}
       <section style={{
-        background: "#FACC15",
+        background: "#819A91",
         padding: "64px 36px",
         textAlign: "center",
         overflow: "hidden",
@@ -268,9 +268,9 @@ export default function Home() {
         {/* Service cards */}
         <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
           {[
-            { name: "CUT", price: "Starting at $75", image: "/images/hero-slide-01.jpg" },
-            { name: "COLOR", price: "Starting at $120", image: "/images/hero-slide-02.jpg" },
-            { name: "STYLE", price: "Starting at $55", image: "/images/hero-slide-03.jpg" },
+            { name: "CUT", price: "Starting at $75", image: "/images//images/studio/barber-chairs-wide.jpg" },
+            { name: "COLOR", price: "Starting at $120", image: "/images//images/studio/portrait-street.jpg" },
+            { name: "STYLE", price: "Starting at $55", image: "/images//images/studio/barber-chair-single.jpg" },
           ].map((service) => (
             <div
               key={service.name}
@@ -331,7 +331,7 @@ export default function Home() {
           {/* Image left */}
           <div style={{ position: "relative", width: "660px", height: "528px", flexShrink: 0 }}>
             <Image
-              src="/images/hero-slide-02.jpg"
+              src="/images//images/studio/portrait-street.jpg"
               alt="Client"
               fill
               style={{ objectFit: "cover", filter: "grayscale(100%)" }}
@@ -406,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTION 6: YELLOW SHOWCASE ──────────────────────────────────── */}
-      <section style={{ background: "#FACC15", padding: "80px 36px", overflow: "hidden" }}>
+      <section style={{ background: "#819A91", padding: "80px 36px", overflow: "hidden" }}>
         <div style={{ display: "flex", gap: "60px", alignItems: "flex-start" }}>
           {/* Left */}
           <div style={{ flex: 1 }}>
@@ -445,9 +445,9 @@ export default function Home() {
             gap: "16px",
           }}>
             {[
-              { label: "Editorial Cut", image: "/images/hero-slide-01.jpg" },
-              { label: "Color Transform", image: "/images/hero-slide-02.jpg" },
-              { label: "Signature Style", image: "/images/hero-slide-03.jpg" },
+              { label: "Editorial Cut", image: "/images//images/studio/barber-chairs-wide.jpg" },
+              { label: "Color Transform", image: "/images//images/studio/portrait-street.jpg" },
+              { label: "Signature Style", image: "/images//images/studio/barber-chair-single.jpg" },
             ].map((item) => (
               <div key={item.label} style={{ position: "relative", height: "140px", overflow: "hidden" }}>
                 <Image
@@ -561,7 +561,7 @@ export default function Home() {
             flexShrink: 0,
           }}>
             <Image
-              src="/images/hero-slide-03.jpg"
+              src="/images//images/studio/barber-chair-single.jpg"
               alt="Book appointment"
               fill
               style={{ objectFit: "cover", filter: "grayscale(100%)" }}
