@@ -162,7 +162,7 @@ export default function Home() {
         <div style={{ height: "80px" }} />
 
         {/* Giant headline */}
-        <div className="px-9 pt-8">
+        <div style={{ paddingLeft: "36px", paddingRight: "36px", paddingTop: "32px" }}>
           <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
           </h1>
