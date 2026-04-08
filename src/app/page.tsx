@@ -167,12 +167,7 @@ export default function Home() {
         </nav>
 
         {/* Giant headline with logo */}
-        <div className="flex items-center gap-6 px-9 pt-24 md:pt-28">
-          <img
-            src="/images/logo-a-mark.png"
-            alt="Anointed A mark"
-            className="w-16 h-auto object-contain opacity-90 shrink-0"
-          />
+        <div className="px-9 pt-32 md:pt-36">
           <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
           </h1>

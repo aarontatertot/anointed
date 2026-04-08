@@ -240,7 +240,7 @@ export default function ContactPage() {
           overflow: "hidden",
         }}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.5!2d-111.9097!3d40.8498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87520c5c7f6d9b0f%3A0x1234!2s640+N+Main+St%2C+North+Salt+Lake%2C+UT+84054!5e0!3m2!1sen!2sus!4v1617000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.834!2d-111.9083!3d40.84978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87520c5e7b0e3a5b%3A0x5b8b2f3a4c8e2d1f!2s640+N+Main+St%2C+North+Salt+Lake%2C+UT+84054!5e0!3m2!1sen!2sus!4v1744000000000!5m2!1sen!2sus"
             width="100%"
             height="450"
             style={{ filter: "grayscale(100%) contrast(1.1)", border: "none", display: "block" }}
