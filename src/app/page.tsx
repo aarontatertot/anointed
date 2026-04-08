@@ -1,11 +1,105 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div style={{ background: "#18181B", color: "#fff", minHeight: "100vh" }}>
 
       {/* ── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section style={{ background: "#18181B", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+        {/* Full-screen menu overlay */}
+        {menuOpen && (
+          <div style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 50,
+            background: "#18181B",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+            {/* Close button */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              style={{
+                position: "absolute",
+                top: "28px",
+                right: "36px",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "'Roboto Mono', monospace",
+                fontWeight: 500,
+                fontSize: "12px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#71717A",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <span style={{ display: "inline-block", width: "12px", height: "12px", background: "#fff" }} />
+              CLOSE
+            </button>
+
+            {/* Nav links */}
+            <nav style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", marginBottom: "48px" }}>
+              {[
+                { label: "HOME", href: "/" },
+                { label: "ABOUT", href: "#about" },
+                { label: "SERVICES", href: "#services" },
+                { label: "TEAM", href: "/team" },
+                { label: "HOME V.2", href: "/home-v2" },
+                { label: "CONTACT", href: "/contact" },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 900,
+                    fontSize: "clamp(40px, 8vw, 80px)",
+                    letterSpacing: "-0.02em",
+                    textTransform: "uppercase",
+                    color: "#D4D4D8",
+                    textDecoration: "none",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Book Now CTA */}
+            <a
+              href="https://squire.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "'Roboto Mono', monospace",
+                fontWeight: 500,
+                fontSize: "13px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#fff",
+                background: "#819A91",
+                borderRadius: "40px",
+                padding: "14px 32px",
+                textDecoration: "none",
+              }}
+            >
+              BOOK NOW
+            </a>
+          </div>
+        )}
 
         {/* Nav */}
         <nav style={{
@@ -44,8 +138,8 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <a
-            href="#book"
+          <button
+            onClick={() => setMenuOpen(true)}
             style={{
               display: "flex",
               alignItems: "center",
@@ -56,7 +150,10 @@ export default function Home() {
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               color: "#71717A",
-              textDecoration: "none",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
             }}
           >
             <span style={{
@@ -66,7 +163,7 @@ export default function Home() {
               background: "#fff",
             }} />
             MENU
-          </a>
+          </button>
         </nav>
 
         {/* Giant headline with logo */}
