@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const slides = [
-  { url: '/images//images/studio/barber-chairs-wide.jpg', alt: 'ANOINTED collection' },
-  { url: '/images//images/studio/portrait-street.jpg', alt: 'ANOINTED collection' },
-  { url: '/images//images/studio/barber-chair-single.jpg', alt: 'ANOINTED collection' },
+  { url: '/images/studio/barber-chairs-wide.jpg', alt: 'ANOINTED collection' },
+  { url: '/images/studio/portrait-street.jpg', alt: 'ANOINTED collection' },
+  { url: '/images/studio/barber-chair-single.jpg', alt: 'ANOINTED collection' },
 ]
 
 export default function HeroSection() {
