@@ -20,10 +20,16 @@ export default function Home() {
           zIndex: 10,
         }}>
           <div style={{ display: "flex", gap: "32px" }}>
-            {["HOME", "ABOUT", "SERVICES"].map((item) => (
+            {[
+              { label: "HOME", href: "#home" },
+              { label: "ABOUT", href: "#about" },
+              { label: "SERVICES", href: "#services" },
+              { label: "TEAM", href: "/team" },
+              { label: "HOME V.2", href: "/home-v2" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 style={{
                   fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 500,
@@ -34,7 +40,7 @@ export default function Home() {
                   textDecoration: "none",
                 }}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
@@ -63,17 +69,14 @@ export default function Home() {
           </a>
         </nav>
 
-        {/* Giant headline */}
-        <div style={{ paddingTop: "80px", paddingLeft: "36px", paddingRight: "36px" }}>
-          <h1 style={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 900,
-            fontSize: "clamp(80px, 15vw, 265px)",
-            textTransform: "uppercase",
-            color: "#D4D4D8",
-            lineHeight: 1,
-            letterSpacing: "-0.02em",
-          }}>
+        {/* Giant headline with logo */}
+        <div className="flex items-center gap-6 px-9 pt-20">
+          <img
+            src="/images/logo-a-mark.png"
+            alt="Anointed A mark"
+            className="w-24 h-24 object-contain opacity-80"
+          />
+          <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
           </h1>
         </div>
@@ -614,7 +617,7 @@ export default function Home() {
           {/* Quick links */}
           <div style={{ display: "flex", gap: "60px", flexWrap: "wrap" }}>
             {[
-              { heading: "NAVIGATE", links: ["Home", "About", "Services", "Gallery"] },
+              { heading: "NAVIGATE", links: ["Home", "Home V.2", "About", "Services", "Gallery", "Team"] },
               { heading: "CONNECT", links: ["Book Now", "Instagram", "Squire", "Call Us"] },
             ].map((col) => (
               <div key={col.heading}>

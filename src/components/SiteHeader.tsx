@@ -106,12 +106,19 @@ export default function SiteHeader() {
           margin: 0,
         }}
       >
-        <Link href="/" className="logo-image block">
+        <Link href="/" className="logo-image flex items-center gap-2">
+          <Image
+            src="/images/logo-a-mark.png"
+            alt="Anointed"
+            width={32}
+            height={32}
+            className="w-8 h-8 object-contain"
+          />
           <Image
             src="/images/neighborhood-logo.svg"
             alt="ANOINTED"
-            width={172}
-            height={26}
+            width={140}
+            height={22}
           />
         </Link>
       </h1>
@@ -181,10 +188,15 @@ export default function SiteHeader() {
           <DropdownLink label="BRANDS" items={brandItems} />
           <DropdownLink label="CATEGORIES" items={categoryItems} />
 
-          {(['COLLECTION', 'LOOK', 'DEALERS'] as const).map((item) => (
+          {([
+            { label: 'COLLECTION', href: '#' },
+            { label: 'LOOK', href: '#' },
+            { label: 'DEALERS', href: '#' },
+            { label: 'TEAM', href: '/team' },
+          ] as const).map((item) => (
             <Link
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
               style={{
                 fontSize: '13px',
                 color: '#222222',
@@ -197,7 +209,7 @@ export default function SiteHeader() {
                 whiteSpace: 'nowrap',
               }}
             >
-              {item}
+              {item.label}
             </Link>
           ))}
 
