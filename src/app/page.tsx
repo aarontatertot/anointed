@@ -577,6 +577,120 @@ export default function Home() {
       </section>
 
       {/* ── SECTION 7: BOOK ─────────────────────────────────────────────── */}
+
+      {/* ─── TEAM SECTION ─── */}
+      <section id="team" style={{ background: "#18181B", padding: "80px 36px" }}>
+        <div style={{
+          display: "inline-block",
+          background: "#fff",
+          color: "#18181B",
+          fontFamily: "'Roboto Mono', monospace",
+          fontWeight: 500,
+          fontSize: "11px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          padding: "6px 12px",
+          marginBottom: "32px",
+        }}>
+          THE ARTISTS
+        </div>
+        <h2 style={{
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 900,
+          fontSize: "clamp(60px, 10vw, 140px)",
+          textTransform: "uppercase",
+          color: "#fff",
+          lineHeight: 1,
+          letterSpacing: "-0.02em",
+          marginBottom: "60px",
+        }}>
+          MEET THE<br />TEAM
+        </h2>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: "40px",
+        }}>
+          {[
+            {
+              name: "MARCUS",
+              role: "MASTER BARBER",
+              bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
+              image: "/images/studio/barber-chair-single.jpg",
+              bookLabel: "BOOK WITH MARCUS",
+            },
+            {
+              name: "JORDAN",
+              role: "COLOR SPECIALIST",
+              bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
+              image: "/images/studio/portrait-street.jpg",
+              bookLabel: "BOOK WITH JORDAN",
+            },
+          ].map((artist) => (
+            <div key={artist.name}>
+              <img
+                src={artist.image}
+                alt={artist.name}
+                style={{
+                  width: "100%",
+                  aspectRatio: "3/4",
+                  objectFit: "cover",
+                  filter: "grayscale(100%)",
+                  display: "block",
+                  marginBottom: "24px",
+                }}
+              />
+              <p style={{
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 900,
+                fontSize: "32px",
+                textTransform: "uppercase",
+                color: "#fff",
+                marginBottom: "6px",
+              }}>{artist.name}</p>
+              <p style={{
+                fontFamily: "'Roboto Mono', monospace",
+                fontWeight: 500,
+                fontSize: "11px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#71717A",
+                marginBottom: "16px",
+              }}>{artist.role}</p>
+              <p style={{
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 400,
+                fontSize: "15px",
+                color: "#A1A1AA",
+                lineHeight: 1.6,
+                marginBottom: "28px",
+                maxWidth: "360px",
+              }}>{artist.bio}</p>
+              <a
+                href="https://squire.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-block",
+                  border: "1px solid #819A91",
+                  borderRadius: "40px",
+                  padding: "10px 24px",
+                  fontFamily: "'Roboto Mono', monospace",
+                  fontWeight: 500,
+                  fontSize: "12px",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  color: "#819A91",
+                  textDecoration: "none",
+                }}
+              >
+                {artist.bookLabel}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="book" style={{ background: "#18181B", padding: "80px 36px 0" }}>
         {/* Top: left label + right body */}
         <div style={{ display: "flex", gap: "60px", marginBottom: "60px", flexWrap: "wrap" }}>
