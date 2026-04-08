@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         {/* Tagline + pill buttons — stacks on mobile */}
-        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center px-9 pt-6" style={{ paddingBottom: "96px" }}>
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingLeft: "36px", paddingRight: "36px", paddingTop: "24px", paddingBottom: "32px" }} className="flex-col md:flex-row">
           <p style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 500,
