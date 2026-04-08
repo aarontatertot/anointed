@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     images: ["/seo/ogp.jpg"],
   },
   icons: {
-    icon: "/seo/favicon.ico",
-    apple: { url: "/seo/apple-touch.png", sizes: "180x180" },
+    icon: [{ url: "/favicon-a-black.png", type: "image/png" }],
+    apple: { url: "/favicon-a-black.png", sizes: "180x180" },
   },
 };
 
