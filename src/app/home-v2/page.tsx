@@ -87,7 +87,7 @@ export default function HomeV2Page() {
           }}>
             <div style={{ position: "relative", height: "220px", marginBottom: "24px", overflow: "hidden" }}>
               <Image
-                src="/images/studio/barber-chair-side.jpg"
+                src="/images/studio/barber-chairs-wide.jpg"
                 alt="Anointed Studio"
                 fill
                 style={{ objectFit: "cover", filter: "grayscale(100%)" }}

@@ -19,7 +19,7 @@ export default function Home() {
           right: 0,
           zIndex: 10,
         }}>
-          <div style={{ display: "flex", gap: "32px" }}>
+          <div style={{ display: "flex", gap: "24px", flexWrap: "nowrap" }}>
             {[
               { label: "HOME", href: "#home" },
               { label: "ABOUT", href: "#about" },
@@ -70,11 +70,11 @@ export default function Home() {
         </nav>
 
         {/* Giant headline with logo */}
-        <div className="flex items-center gap-6 px-9 pt-20">
+        <div className="flex items-center gap-6 px-9 pt-24 md:pt-28">
           <img
             src="/images/logo-a-mark.png"
             alt="Anointed A mark"
-            className="w-24 h-24 object-contain opacity-80"
+            className="w-16 h-auto object-contain opacity-90 shrink-0"
           />
           <h1 className="text-[clamp(80px,15vw,265px)] font-black font-['Inter'] text-neutral-300 uppercase leading-none tracking-tight">
             ANOINTED
