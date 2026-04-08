@@ -281,7 +281,7 @@ export default function Home() {
               lineHeight: 1.8,
               marginBottom: "28px",
             }}>
-              Anointed is a premium hair studio built on craft, intention, and artistry. Every appointment is a collaboration. Every style is an expression of who you are — and who you&apos;re becoming.
+              Anointed Studio. &quot;Equipped with belief.&quot; Anointed Studio was built with purpose. Craft taken seriously. Standards that don&apos;t slip. Bringing a level of precision to Utah that the culture deserves. Find out about our barbers, services, address, and working hours.
             </p>
             <a
               href="#about"
