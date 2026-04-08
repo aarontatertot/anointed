@@ -613,18 +613,18 @@ export default function Home() {
         }}>
           {[
             {
-              name: "MARCUS",
+              name: "DONOVAN",
               role: "MASTER BARBER",
               bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
               image: "/images/studio/barber-chair-single.jpg",
-              bookLabel: "BOOK WITH MARCUS",
+              bookLabel: "BOOK WITH DONOVAN",
             },
             {
-              name: "JORDAN",
+              name: "ADLEY",
               role: "COLOR SPECIALIST",
               bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
               image: "/images/studio/portrait-street.jpg",
-              bookLabel: "BOOK WITH JORDAN",
+              bookLabel: "BOOK WITH ADLEY",
             },
           ].map((artist) => (
             <div key={artist.name}>

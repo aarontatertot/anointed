@@ -4,17 +4,17 @@ export default function TeamPage() {
   const team = [
     {
       image: "/images/studio/barber-chair-single.jpg",
-      name: "MARCUS",
+      name: "DONOVAN",
       role: "MASTER BARBER",
       bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
-      bookLabel: "BOOK WITH MARCUS",
+      bookLabel: "BOOK WITH DONOVAN",
     },
     {
       image: "/images/studio/barber-chairs-wide.jpg",
-      name: "JORDAN",
+      name: "ADLEY",
       role: "COLOR SPECIALIST",
       bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
-      bookLabel: "BOOK WITH JORDAN",
+      bookLabel: "BOOK WITH ADLEY",
     },
   ];
 
@@ -31,8 +31,8 @@ export default function TeamPage() {
         <div style={{ display: "flex", gap: "32px" }}>
           {[
             { label: "HOME", href: "/" },
-            { label: "ABOUT", href: "/about" },
-            { label: "SERVICES", href: "/services" },
+            { label: "ABOUT", href: "/#about" },
+            { label: "SERVICES", href: "/#services" },
             { label: "TEAM", href: "/team" },
           ].map((item) => (
             <a

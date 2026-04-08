@@ -97,7 +97,7 @@ export default function ContactPage() {
 
             {/* Info pills */}
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
-              {["640 N MAIN ST ↗", "NORTH SALT LAKE, UT ↗", "BY APPOINTMENT ↗"].map((pill) => (
+              {["640 N MAIN ST, SUITE 225 ↗", "NORTH SALT LAKE, UT ↗", "BY APPOINTMENT ↗"].map((pill) => (
                 <a
                   key={pill}
                   href="https://maps.google.com"
