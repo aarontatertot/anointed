@@ -1,37 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-  /* ANOINTED color tokens */
-  --color-ink: #222222;
-  --color-border: #dddddd;
-  --color-muted: #aaaaaa;
-  --color-light-muted: #cccccc;
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f5f5f5;
-  --color-bg-dark: #000000;
-  --color-bg-overlay: rgba(0, 0, 0, 0.5);
+  --color-zinc-900: #18181B;
+  --color-yellow-400: #FACC15;
+  --color-neutral-300: #D4D4D8;
+  --color-neutral-400: #A1A1AA;
+  --color-neutral-500: #71717A;
+  --color-stone-50: #FAFAF9;
 
-  /* Font stacks */
-  --font-primary: 'HelveticaLTWXX-BoldCond', 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, YuGothic, -apple-system, 'system-ui', sans-serif;
-  --font-logo: Helvetica, Arial, sans-serif;
-}
-
-/* Custom font face — HelveticaLTWXX-BoldCond */
-@font-face {
-  font-family: 'HelveticaLTWXX-BoldCond';
-  src: url('/fonts/39E1F5_0_0.woff2') format('woff2'),
-       url('/fonts/39E1F5_0_0.woff') format('woff'),
-       url('/fonts/39E1F5_0_0.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --background: #EEEFE0;
-  --foreground: #1a1a1a;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-body: 'Roboto', sans-serif;
 }
 
 * {
@@ -41,16 +20,13 @@
 }
 
 html {
-  background: #EEEFE0;
+  background: #18181B;
 }
 
 body {
-  background: #EEEFE0;
-  color: #1a1a1a;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15;
+  background: #18181B;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,38 +36,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
   display: block;
-}
-
-/* Slideshow transition */
-@keyframes slide-fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Slide-up animation for product cards */
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.slide-up-animation {
-  animation: slide-up 0.4s ease forwards;
-}
-
-/* Cover overlay hover transition */
-.cover {
-  transition: opacity 0.3s ease;
 }
