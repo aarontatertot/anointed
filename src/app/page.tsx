@@ -533,11 +533,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
-              name: "DONOVAN",
+              name: "DONAVAN",
               role: "BARBER · COLOR SPECIALIST",
               bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
               image: "/images/studio/barber-chair-single.jpg",
-              bookLabel: "BOOK WITH DONOVAN",
+              bookLabel: "BOOK WITH DONAVAN",
               bookHref: DONOVAN_BOOK_URL,
             },
             {

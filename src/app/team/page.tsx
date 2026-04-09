@@ -8,10 +8,10 @@ export default function TeamPage() {
   const team = [
     {
       image: "/images/studio/barber-chair-single.jpg",
-      name: "DONOVAN",
+      name: "DONAVAN",
       role: "BARBER · COLOR SPECIALIST",
       bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
-      bookLabel: "BOOK WITH DONOVAN",
+      bookLabel: "BOOK WITH DONAVAN",
       bookHref: DONOVAN_BOOK_URL,
     },
     {
