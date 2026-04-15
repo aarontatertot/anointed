@@ -311,12 +311,12 @@ export default function Home() {
         </div>
 
         {/* Hero content */}
-        <div style={{ position: "relative", zIndex: 1, paddingLeft: 60, paddingRight: 36 }}>
+        <div style={{ position: "relative", zIndex: 1, paddingLeft: "clamp(16px, 5vw, 60px)", paddingRight: "clamp(16px, 4vw, 36px)" }}>
           <h1
             style={{
               fontFamily: "'Inter', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(80px, 12vw, 180px)",
+              fontSize: "clamp(36px, 10vw, 180px)",
               textTransform: "uppercase",
               color: "#EEEFE1",
               letterSpacing: "-0.02em",
