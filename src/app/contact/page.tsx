@@ -58,8 +58,9 @@ export default function ContactPage() {
             <Link
               key={label}
               href={href}
+              className="btn-text"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
@@ -73,8 +74,9 @@ export default function ContactPage() {
           ))}
           <Link
             href="/contact"
+            className="btn-text"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -89,8 +91,9 @@ export default function ContactPage() {
             href={GENERAL_BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-outline"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -121,9 +124,9 @@ export default function ContactPage() {
           }}
           aria-label="Open menu"
         >
-          <span style={{ display: "block", width: 24, height: 2, background: "#fff" }} />
-          <span style={{ display: "block", width: 24, height: 2, background: "#fff" }} />
-          <span style={{ display: "block", width: 16, height: 2, background: "#fff" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 16, height: 2, background: "#889992" }} />
         </button>
       </nav>
 
@@ -143,6 +146,7 @@ export default function ContactPage() {
         >
           <button
             onClick={() => setMenuOpen(false)}
+            className="btn-text"
             style={{
               position: "absolute",
               top: 28,
@@ -150,7 +154,7 @@ export default function ContactPage() {
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -166,13 +170,14 @@ export default function ContactPage() {
                 key={label}
                 href={href}
                 onClick={() => setMenuOpen(false)}
+                className="btn-text"
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontWeight: 900,
                   fontSize: "clamp(40px, 8vw, 80px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
-                  color: "#D4D4D8",
+                  color: "#889992",
                   textDecoration: "none",
                   lineHeight: 1.1,
                 }}
@@ -183,13 +188,14 @@ export default function ContactPage() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
+              className="btn-text"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(40px, 8vw, 80px)",
                 letterSpacing: "-0.02em",
                 textTransform: "uppercase",
-                color: "#fff",
+                color: "#889992",
                 textDecoration: "none",
                 lineHeight: 1.1,
               }}
@@ -201,8 +207,9 @@ export default function ContactPage() {
             href={GENERAL_BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-solid"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 13,
               letterSpacing: "0.15em",
@@ -243,7 +250,7 @@ export default function ContactPage() {
 
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
                 color: "#A1A1AA",
@@ -254,27 +261,14 @@ export default function ContactPage() {
             </p>
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
                 color: "#A1A1AA",
-                marginBottom: 4,
+                marginBottom: 32,
               }}
             >
               North Salt Lake, UT 84054
-            </p>
-            <p
-              style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 400,
-                fontSize: 14,
-                color: "#71717A",
-                marginBottom: 32,
-                letterSpacing: "0.05em",
-                textTransform: "uppercase",
-              }}
-            >
-              By Appointment Only
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-start" }}>
@@ -288,8 +282,9 @@ export default function ContactPage() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="btn-outline"
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Roboto Mono', monospace",
                     fontWeight: 500,
                     fontSize: 11,
                     letterSpacing: "0.12em",
@@ -314,16 +309,17 @@ export default function ContactPage() {
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 900,
                 fontSize: 28,
-                color: "#fff",
+                textTransform: "uppercase",
+                color: "#889992",
                 marginBottom: 12,
                 letterSpacing: "-0.01em",
               }}
             >
-              Send us a message
+              SEND US A MESSAGE
             </h2>
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
                 color: "#A1A1AA",
@@ -344,7 +340,7 @@ export default function ContactPage() {
                   border: "none",
                   borderBottom: "1px solid rgba(255,255,255,0.12)",
                   outline: "none",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 13,
                   letterSpacing: "0.1em",
@@ -362,7 +358,7 @@ export default function ContactPage() {
                   border: "none",
                   borderBottom: "1px solid rgba(255,255,255,0.12)",
                   outline: "none",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 13,
                   letterSpacing: "0.1em",
@@ -380,7 +376,7 @@ export default function ContactPage() {
                   border: "none",
                   borderBottom: "1px solid rgba(255,255,255,0.12)",
                   outline: "none",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 13,
                   letterSpacing: "0.1em",
@@ -393,13 +389,14 @@ export default function ContactPage() {
               />
               <button
                 type="submit"
+                className="btn-solid"
                 style={{
                   alignSelf: "flex-start",
                   background: "#819A91",
                   border: "none",
                   borderRadius: 40,
                   padding: "12px 28px",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 500,
                   fontSize: 12,
                   letterSpacing: "0.12em",
@@ -441,7 +438,7 @@ export default function ContactPage() {
             <div style={{ marginBottom: 12, opacity: 0.4, lineHeight: 0 }}>
               <Image src="/images/logo-a-mark-light.png" width={60} height={60} alt="Anointed" />
             </div>
-            <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 15, color: "#71717A" }}>
+            <p style={{ fontFamily: "'Roboto Mono', monospace", fontWeight: 400, fontSize: 15, color: "#71717A" }}>
               Equipped with belief.
             </p>
           </div>
@@ -453,8 +450,9 @@ export default function ContactPage() {
               <Link
                 key={label}
                 href={href}
+                className="btn-text"
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 13,
                   letterSpacing: "0.1em",
@@ -470,8 +468,9 @@ export default function ContactPage() {
               href={GENERAL_BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-outline"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
@@ -491,7 +490,7 @@ export default function ContactPage() {
           style={{
             borderTop: "1px solid rgba(255,255,255,0.08)",
             paddingTop: 20,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 12,
             color: "#52525B",

@@ -107,8 +107,9 @@ export default function Home() {
             <button
               key={label}
               onClick={() => scrollTo(id)}
+              className="btn-text"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
@@ -125,8 +126,9 @@ export default function Home() {
           ))}
           <Link
             href="/contact"
+            className="btn-text"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -141,8 +143,9 @@ export default function Home() {
             href={GENERAL_BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-outline"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -173,9 +176,9 @@ export default function Home() {
           }}
           aria-label="Open menu"
         >
-          <span style={{ display: "block", width: 24, height: 2, background: "#fff" }} />
-          <span style={{ display: "block", width: 24, height: 2, background: "#fff" }} />
-          <span style={{ display: "block", width: 16, height: 2, background: "#fff" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 16, height: 2, background: "#889992" }} />
         </button>
       </nav>
 
@@ -195,6 +198,7 @@ export default function Home() {
         >
           <button
             onClick={() => setMenuOpen(false)}
+            className="btn-text"
             style={{
               position: "absolute",
               top: 28,
@@ -202,7 +206,7 @@ export default function Home() {
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
@@ -225,13 +229,14 @@ export default function Home() {
               <button
                 key={label}
                 onClick={() => scrollTo(id)}
+                className="btn-text"
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontWeight: 900,
                   fontSize: "clamp(40px, 8vw, 80px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
-                  color: "#D4D4D8",
+                  color: "#889992",
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -244,13 +249,14 @@ export default function Home() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
+              className="btn-text"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(40px, 8vw, 80px)",
                 letterSpacing: "-0.02em",
                 textTransform: "uppercase",
-                color: "#D4D4D8",
+                color: "#889992",
                 textDecoration: "none",
                 lineHeight: 1.1,
               }}
@@ -262,8 +268,9 @@ export default function Home() {
             href={GENERAL_BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-solid"
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 13,
               letterSpacing: "0.15em",
@@ -321,7 +328,7 @@ export default function Home() {
           </h1>
           <p
             style={{
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 400,
               fontSize: 18,
               color: "#819A91",
@@ -335,8 +342,9 @@ export default function Home() {
               href={GENERAL_BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-solid"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 13,
                 letterSpacing: "0.1em",
@@ -352,8 +360,9 @@ export default function Home() {
             </a>
             <button
               onClick={() => scrollTo("gallery")}
+              className="btn-outline"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 13,
                 letterSpacing: "0.1em",
@@ -366,7 +375,7 @@ export default function Home() {
                 cursor: "pointer",
               }}
             >
-              GALLERY ↓
+              GALLERY
             </button>
           </div>
         </div>
@@ -384,7 +393,7 @@ export default function Home() {
                 fontWeight: 900,
                 fontSize: "clamp(48px, 7vw, 96px)",
                 textTransform: "uppercase",
-                color: "#fff",
+                color: "#889992",
                 lineHeight: 1,
                 letterSpacing: "-0.02em",
                 margin: 0,
@@ -397,13 +406,10 @@ export default function Home() {
           </div>
 
           {/* Right */}
-          <div style={{ position: "relative", paddingTop: 8 }}>
-            <div style={{ position: "absolute", top: 0, right: 0, opacity: 0.6, lineHeight: 0 }}>
-              <Image src="/images/logo-a-mark.png" width={80} height={80} alt="" />
-            </div>
+          <div style={{ paddingTop: 8 }}>
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 16,
                 color: "#A1A1AA",
@@ -420,17 +426,22 @@ export default function Home() {
               href={GENERAL_BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-solid"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                display: "inline-block",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
-                fontSize: 12,
-                letterSpacing: "0.12em",
+                fontSize: 13,
+                letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#819A91",
+                color: "#000",
+                background: "#889992",
+                borderRadius: 40,
+                padding: "12px 24px",
                 textDecoration: "none",
               }}
             >
-              BOOK NOW →
+              BOOK NOW
             </a>
           </div>
         </div>
@@ -463,7 +474,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#fff",
+            color: "#889992",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -473,7 +484,7 @@ export default function Home() {
         </h2>
         <p
           style={{
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 16,
             color: "#A1A1AA",
@@ -486,9 +497,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { name: "HAIRCUTS", price: "Starting at $35", image: "/images/studio/barber-chair-single.jpg" },
-            { name: "SHAVES", price: "Starting at $25", image: "/images/studio/portrait-street.jpg" },
-            { name: "COLOR", price: "Starting at $65", image: "/images/studio/street-scene.jpg" },
+            { name: "HAIRCUTS", price: "Starting at $70", image: "/images/studio/barber-chair-single.jpg" },
+            { name: "SHAVES", price: "Starting at $50", image: "/images/studio/portrait-street.jpg" },
+            { name: "COLOR", price: "Starting at $80", image: "/images/studio/street-scene.jpg" },
           ].map((service) => (
             <div
               key={service.name}
@@ -527,7 +538,7 @@ export default function Home() {
                 </p>
                 <p
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Roboto Mono', monospace",
                     fontWeight: 400,
                     fontSize: 13,
                     color: "#A1A1AA",
@@ -551,7 +562,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#fff",
+            color: "#889992",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -561,7 +572,7 @@ export default function Home() {
         </h2>
         <p
           style={{
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 16,
             color: "#A1A1AA",
@@ -595,7 +606,7 @@ export default function Home() {
               <div
                 style={{
                   position: "relative",
-                  aspectRatio: "3/4",
+                  height: 200,
                   overflow: "hidden",
                   marginBottom: 24,
                 }}
@@ -621,7 +632,7 @@ export default function Home() {
               </p>
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 12,
                   letterSpacing: "0.15em",
@@ -634,7 +645,7 @@ export default function Home() {
               </p>
               <p
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 15,
                   color: "#A1A1AA",
@@ -649,12 +660,13 @@ export default function Home() {
                 href={artist.bookHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn-outline"
                 style={{
                   display: "inline-block",
                   border: "1px solid #819A91",
                   borderRadius: 40,
                   padding: "10px 24px",
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 500,
                   fontSize: 12,
                   letterSpacing: "0.15em",
@@ -679,7 +691,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#fff",
+            color: "#889992",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -689,7 +701,7 @@ export default function Home() {
         </h2>
         <p
           style={{
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 16,
             color: "#A1A1AA",
@@ -747,6 +759,7 @@ export default function Home() {
           {/* Close button */}
           <button
             onClick={() => setModalOpen(false)}
+            className="btn-text"
             style={{
               position: "absolute",
               top: 24,
@@ -754,7 +767,7 @@ export default function Home() {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "#fff",
+              color: "#889992",
               fontSize: 24,
               zIndex: 51,
               lineHeight: 1,
@@ -771,7 +784,7 @@ export default function Home() {
               top: 28,
               left: "50%",
               transform: "translateX(-50%)",
-              fontFamily: "'Roboto', sans-serif",
+              fontFamily: "'Roboto Mono', monospace",
               fontWeight: 400,
               fontSize: 13,
               color: "#A1A1AA",
@@ -788,16 +801,17 @@ export default function Home() {
               e.stopPropagation();
               setModalIndex((i) => (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
             }}
+            className="btn-text"
             style={{
               position: "absolute",
               left: 24,
               background: "none",
-              border: "1px solid rgba(255,255,255,0.25)",
+              border: "1px solid #889992",
               borderRadius: "50%",
               width: 48,
               height: 48,
               cursor: "pointer",
-              color: "#fff",
+              color: "#889992",
               fontSize: 20,
               zIndex: 51,
               display: "flex",
@@ -834,16 +848,17 @@ export default function Home() {
               e.stopPropagation();
               setModalIndex((i) => (i + 1) % GALLERY_IMAGES.length);
             }}
+            className="btn-text"
             style={{
               position: "absolute",
               right: 24,
               background: "none",
-              border: "1px solid rgba(255,255,255,0.25)",
+              border: "1px solid #889992",
               borderRadius: "50%",
               width: 48,
               height: 48,
               cursor: "pointer",
-              color: "#fff",
+              color: "#889992",
               fontSize: 20,
               zIndex: 51,
               display: "flex",
@@ -867,7 +882,7 @@ export default function Home() {
             </div>
             <p
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
                 color: "#71717A",
@@ -890,8 +905,9 @@ export default function Home() {
                 <button
                   key={label}
                   onClick={() => scrollTo(id)}
+                  className="btn-text"
                   style={{
-                    fontFamily: "'Roboto', sans-serif",
+                    fontFamily: "'Roboto Mono', monospace",
                     fontWeight: 400,
                     fontSize: 13,
                     letterSpacing: "0.1em",
@@ -908,8 +924,9 @@ export default function Home() {
               ))}
               <Link
                 href="/contact"
+                className="btn-text"
                 style={{
-                  fontFamily: "'Roboto', sans-serif",
+                  fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 13,
                   letterSpacing: "0.1em",
@@ -925,8 +942,9 @@ export default function Home() {
               href={GENERAL_BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-outline"
               style={{
-                fontFamily: "'Roboto', sans-serif",
+                fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
@@ -947,7 +965,7 @@ export default function Home() {
           style={{
             borderTop: "1px solid rgba(255,255,255,0.08)",
             paddingTop: 20,
-            fontFamily: "'Roboto', sans-serif",
+            fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 12,
             color: "#52525B",

@@ -9,7 +9,7 @@
 
   --font-display: 'Inter', sans-serif;
   --font-mono: 'Roboto Mono', monospace;
-  --font-body: 'Roboto', sans-serif;
+  --font-body: 'Roboto Mono', monospace;
 }
 
 * {
@@ -26,9 +26,32 @@ html {
 body {
   background: #0d0d0d;
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-text {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-text:hover {
+  opacity: 0.7;
+}
+
+.btn-solid {
+  transition: opacity 0.2s ease;
+}
+.btn-solid:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn-outline:hover {
+  background: #889992 !important;
+  color: #000 !important;
 }
 
 a {
