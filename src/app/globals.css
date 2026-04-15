@@ -2,7 +2,6 @@
 
 @theme {
   --color-zinc-900: #18181B;
-  --color-#819A91: #819A91;
   --color-neutral-300: #D4D4D8;
   --color-neutral-400: #A1A1AA;
   --color-neutral-500: #71717A;
@@ -20,11 +19,12 @@
 }
 
 html {
-  background: #18181B;
+  background: #0d0d0d;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #18181B;
+  background: #0d0d0d;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
