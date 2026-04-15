@@ -318,7 +318,7 @@ export default function Home() {
               fontWeight: 900,
               fontSize: "clamp(80px, 12vw, 180px)",
               textTransform: "uppercase",
-              color: "#fff",
+              color: "#889992",
               letterSpacing: "-0.02em",
               lineHeight: 1,
               margin: 0,
@@ -529,7 +529,7 @@ export default function Home() {
                     fontWeight: 900,
                     fontSize: 28,
                     textTransform: "uppercase",
-                    color: "#fff",
+                    color: "#889992",
                     lineHeight: 1,
                     margin: 0,
                   }}
@@ -624,7 +624,7 @@ export default function Home() {
                   fontWeight: 900,
                   fontSize: 32,
                   textTransform: "uppercase",
-                  color: "#fff",
+                  color: "#889992",
                   margin: "0 0 6px",
                 }}
               >
@@ -795,80 +795,84 @@ export default function Home() {
             {modalIndex + 1} / {GALLERY_IMAGES.length}
           </div>
 
-          {/* Prev */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setModalIndex((i) => (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
-            }}
-            className="btn-text"
-            style={{
-              position: "absolute",
-              left: 24,
-              background: "none",
-              border: "1px solid #889992",
-              borderRadius: "50%",
-              width: 48,
-              height: 48,
-              cursor: "pointer",
-              color: "#889992",
-              fontSize: 20,
-              zIndex: 51,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            aria-label="Previous image"
-          >
-            ←
-          </button>
-
-          {/* Image container */}
+          {/* Arrows + image row */}
           <div
             style={{
-              position: "relative",
-              maxWidth: "90vw",
-              maxHeight: "85vh",
-              width: "100%",
-              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: 20,
+              zIndex: 51,
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={GALLERY_IMAGES[modalIndex].src}
-              alt={GALLERY_IMAGES[modalIndex].alt}
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
+            {/* Prev */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setModalIndex((i) => (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
+              }}
+              className="btn-text"
+              style={{
+                flexShrink: 0,
+                background: "none",
+                border: "1px solid #889992",
+                borderRadius: "50%",
+                width: 48,
+                height: 48,
+                cursor: "pointer",
+                color: "#889992",
+                fontSize: 20,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              aria-label="Previous image"
+            >
+              ←
+            </button>
 
-          {/* Next */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setModalIndex((i) => (i + 1) % GALLERY_IMAGES.length);
-            }}
-            className="btn-text"
-            style={{
-              position: "absolute",
-              right: 24,
-              background: "none",
-              border: "1px solid #889992",
-              borderRadius: "50%",
-              width: 48,
-              height: 48,
-              cursor: "pointer",
-              color: "#889992",
-              fontSize: 20,
-              zIndex: 51,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            aria-label="Next image"
-          >
-            →
-          </button>
+            {/* Image container */}
+            <div
+              style={{
+                position: "relative",
+                width: "60vw",
+                height: "65vh",
+              }}
+            >
+              <Image
+                src={GALLERY_IMAGES[modalIndex].src}
+                alt={GALLERY_IMAGES[modalIndex].alt}
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+
+            {/* Next */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setModalIndex((i) => (i + 1) % GALLERY_IMAGES.length);
+              }}
+              className="btn-text"
+              style={{
+                flexShrink: 0,
+                background: "none",
+                border: "1px solid #889992",
+                borderRadius: "50%",
+                width: 48,
+                height: 48,
+                cursor: "pointer",
+                color: "#889992",
+                fontSize: 20,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              aria-label="Next image"
+            >
+              →
+            </button>
+          </div>
         </div>
       )}
 

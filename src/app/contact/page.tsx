@@ -239,7 +239,7 @@ export default function ContactPage() {
                 fontWeight: 900,
                 fontSize: "clamp(48px, 7vw, 96px)",
                 textTransform: "uppercase",
-                color: "#fff",
+                color: "#889992",
                 lineHeight: 1,
                 letterSpacing: "-0.02em",
                 marginBottom: 48,
