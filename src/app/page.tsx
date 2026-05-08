@@ -90,7 +90,7 @@ export default function Home() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 36px",
+          padding: "24px 36px",
           background: navScrolled ? "rgba(13,13,13,0.95)" : "transparent",
           backdropFilter: navScrolled ? "blur(8px)" : "none",
           transition: "background 0.3s ease, backdrop-filter 0.3s ease",
@@ -102,7 +102,7 @@ export default function Home() {
           style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
           aria-label="Go to top"
         >
-          <Image src="/logo-new.svg" width={40} height={40} alt="Anointed" />
+          <Image src="/logo-new.svg" width={80} height={80} alt="Anointed" />
         </button>
 
         {/* Desktop links */}
@@ -875,8 +875,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start" style={{ marginBottom: 48 }}>
           {/* Left */}
           <div>
-            <div style={{ marginBottom: 16, opacity: 0.4, lineHeight: 0 }}>
-              <Image src="/logo-new.svg" width={60} height={60} alt="Anointed" />
+            <div style={{ marginBottom: 16, opacity: 1, lineHeight: 0 }}>
+              <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" />
             </div>
             <p
               style={{

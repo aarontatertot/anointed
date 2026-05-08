@@ -45,14 +45,14 @@ export default function ContactPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 36px",
+          padding: "24px 36px",
           background: navScrolled ? "rgba(13,13,13,0.95)" : "rgba(13,13,13,0.85)",
           backdropFilter: "blur(8px)",
           transition: "background 0.3s ease",
         }}
       >
         <Link href="/" style={{ lineHeight: 0 }}>
-          <Image src="/logo-new.svg" width={40} height={40} alt="Anointed" />
+          <Image src="/logo-new.svg" width={80} height={80} alt="Anointed" />
         </Link>
 
         {/* Desktop links */}
@@ -441,8 +441,8 @@ export default function ContactPage() {
       <footer style={{ background: "#0d0d0d", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "60px 36px 40px" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" style={{ marginBottom: 32 }}>
           <div>
-            <div style={{ marginBottom: 12, opacity: 0.4, lineHeight: 0 }}>
-              <Image src="/logo-new.svg" width={60} height={60} alt="Anointed" />
+            <div style={{ marginBottom: 12, opacity: 1, lineHeight: 0 }}>
+              <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" />
             </div>
             <p style={{ fontFamily: "'Roboto Mono', monospace", fontWeight: 400, fontSize: 15, color: "#bda49d" }}>
               Equipped with belief.
