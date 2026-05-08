@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import PasswordGate from "../components/PasswordGate";
 
 export const viewport: Viewport = {
   themeColor: "#18181B",
@@ -48,7 +49,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body><PasswordGate>{children}</PasswordGate></body>
     </html>
   );
 }

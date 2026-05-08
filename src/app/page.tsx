@@ -876,13 +876,13 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end" style={{ marginBottom: 48 }}>
           {/* Left */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <div style={{ marginBottom: -42, lineHeight: 0, width: 180 }}>
+            <div style={{ marginBottom: 40, lineHeight: 0 }}>
               <Image
                 src="/logo-new.svg"
                 width={180}
                 height={180}
                 alt="Anointed"
-                style={{ display: "block", transform: "translateX(-50px)" }}
+                style={{ display: "block" }}
               />
             </div>
             <p
