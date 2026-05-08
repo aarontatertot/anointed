@@ -440,9 +440,9 @@ export default function ContactPage() {
 
       {/* ── FOOTER ───────────────────────────────────────────────────────── */}
       <footer style={{ background: "#0d0d0d", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "60px 36px 40px" }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" style={{ marginBottom: 32 }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end" style={{ marginBottom: 32 }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <div style={{ marginBottom: 12, lineHeight: 0, width: 180 }}>
+            <div style={{ marginBottom: 6, lineHeight: 0 }}>
               <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" style={{ display: "block" }} />
             </div>
             <p style={{ fontFamily: "'Roboto Mono', monospace", fontWeight: 400, fontSize: 15, color: "#bda49d", margin: 0, textAlign: "left" }}>
