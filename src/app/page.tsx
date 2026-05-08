@@ -875,7 +875,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start" style={{ marginBottom: 48 }}>
           {/* Left */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <div style={{ marginBottom: 16, lineHeight: 0 }}>
+            <div style={{ marginBottom: 16, lineHeight: 0, width: 180 }}>
               <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" style={{ display: "block" }} />
             </div>
             <p
@@ -884,6 +884,8 @@ export default function Home() {
                 fontWeight: 400,
                 fontSize: 15,
                 color: "#bda49d",
+                margin: 0,
+                textAlign: "left",
               }}
             >
               Equipped with belief.
