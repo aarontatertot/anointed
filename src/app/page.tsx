@@ -36,6 +36,10 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
+  const [navBookHovered, setNavBookHovered] = useState(false);
+  const [heroGalleryHovered, setHeroGalleryHovered] = useState(false);
+  const [teamHoveredIdx, setTeamHoveredIdx] = useState<number | null>(null);
+  const [footerBookHovered, setFooterBookHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,14 +148,16 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
+            onMouseEnter={() => setNavBookHovered(true)}
+            onMouseLeave={() => setNavBookHovered(false)}
             style={{
               fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#ebddd9",
-              border: "1px solid #ebddd9",
+              color: navBookHovered ? "#bda49d" : "#ebddd9",
+              border: navBookHovered ? "1px solid #bda49d" : "1px solid #ebddd9",
               borderRadius: 40,
               padding: "8px 20px",
               textDecoration: "none",
@@ -361,15 +367,17 @@ export default function Home() {
             <button
               onClick={() => scrollTo("gallery")}
               className="btn-outline"
+              onMouseEnter={() => setHeroGalleryHovered(true)}
+              onMouseLeave={() => setHeroGalleryHovered(false)}
               style={{
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 13,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#ebddd9",
+                color: heroGalleryHovered ? "#bda49d" : "#ebddd9",
                 background: "rgba(0,0,0,0.3)",
-                border: "1px solid #ebddd9",
+                border: heroGalleryHovered ? "1px solid #bda49d" : "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "12px 24px",
                 cursor: "pointer",
@@ -586,7 +594,7 @@ export default function Home() {
               bookLabel: "BOOK WITH ADLEY",
               bookHref: ADLEY_BOOK_URL,
             },
-          ].map((artist) => (
+          ].map((artist, idx) => (
             <div key={artist.name}>
               <div
                 style={{
@@ -646,9 +654,11 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline"
+                onMouseEnter={() => setTeamHoveredIdx(idx)}
+                onMouseLeave={() => setTeamHoveredIdx(null)}
                 style={{
                   display: "inline-block",
-                  border: "1px solid #ebddd9",
+                  border: teamHoveredIdx === idx ? "1px solid #bda49d" : "1px solid #ebddd9",
                   borderRadius: 40,
                   padding: "10px 24px",
                   fontFamily: "'Roboto Mono', monospace",
@@ -656,7 +666,7 @@ export default function Home() {
                   fontSize: 12,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#ebddd9",
+                  color: teamHoveredIdx === idx ? "#bda49d" : "#ebddd9",
                   textDecoration: "none",
                 }}
               >
@@ -931,14 +941,16 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
+              onMouseEnter={() => setFooterBookHovered(true)}
+              onMouseLeave={() => setFooterBookHovered(false)}
               style={{
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#ebddd9",
-                border: "1px solid #ebddd9",
+                color: footerBookHovered ? "#bda49d" : "#ebddd9",
+                border: footerBookHovered ? "1px solid #bda49d" : "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "8px 20px",
                 textDecoration: "none",

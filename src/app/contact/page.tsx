@@ -21,6 +21,9 @@ function SageBar() {
 export default function ContactPage() {
   const [navScrolled, setNavScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navBookHovered, setNavBookHovered] = useState(false);
+  const [infoHoveredIdx, setInfoHoveredIdx] = useState<number | null>(null);
+  const [footerBookHovered, setFooterBookHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setNavScrolled(window.scrollY > 60);
@@ -92,14 +95,16 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
+            onMouseEnter={() => setNavBookHovered(true)}
+            onMouseLeave={() => setNavBookHovered(false)}
             style={{
               fontFamily: "'Roboto Mono', monospace",
               fontWeight: 500,
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#ebddd9",
-              border: "1px solid #ebddd9",
+              color: navBookHovered ? "#bda49d" : "#ebddd9",
+              border: navBookHovered ? "1px solid #bda49d" : "1px solid #ebddd9",
               borderRadius: 40,
               padding: "8px 20px",
               textDecoration: "none",
@@ -276,21 +281,23 @@ export default function ContactPage() {
                 { label: "640 N MAIN ST, SUITE 225", href: "https://maps.google.com/?q=640+N+Main+St+Suite+225+North+Salt+Lake+UT+84054" },
                 { label: "NORTH SALT LAKE, UT", href: "https://maps.google.com/?q=640+N+Main+St+Suite+225+North+Salt+Lake+UT+84054" },
                 { label: "BY APPOINTMENT", href: GENERAL_BOOK_URL },
-              ].map(({ label, href }) => (
+              ].map(({ label, href }, idx) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline"
+                  onMouseEnter={() => setInfoHoveredIdx(idx)}
+                  onMouseLeave={() => setInfoHoveredIdx(null)}
                   style={{
                     fontFamily: "'Roboto Mono', monospace",
                     fontWeight: 500,
                     fontSize: 11,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#ebddd9",
-                    border: "1px solid #ebddd9",
+                    color: infoHoveredIdx === idx ? "#bda49d" : "#ebddd9",
+                    border: infoHoveredIdx === idx ? "1px solid #bda49d" : "1px solid #ebddd9",
                     borderRadius: 40,
                     padding: "10px 20px",
                     textDecoration: "none",
@@ -468,14 +475,16 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
+              onMouseEnter={() => setFooterBookHovered(true)}
+              onMouseLeave={() => setFooterBookHovered(false)}
               style={{
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 500,
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#ebddd9",
-                border: "1px solid #ebddd9",
+                color: footerBookHovered ? "#bda49d" : "#ebddd9",
+                border: footerBookHovered ? "1px solid #bda49d" : "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "8px 20px",
                 textDecoration: "none",
