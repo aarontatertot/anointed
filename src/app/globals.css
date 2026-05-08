@@ -25,7 +25,7 @@ html {
 
 body {
   background: #0d0d0d;
-  color: #ffffff;
+  color: #ebddd9;
   font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,7 +50,7 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 .btn-outline:hover {
-  background: #889992 !important;
+  background: #bda49d !important;
   color: #000 !important;
 }
 
@@ -62,4 +62,22 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+
+.logo-login-animation {
+  animation: logo-enlarge-then-rotate 1.2s ease-out both;
+  transform-origin: center;
+}
+
+@keyframes logo-enlarge-then-rotate {
+  0% {
+    transform: scale(0.65) rotate(0deg);
+  }
+  60% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }

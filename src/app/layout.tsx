@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ANOINTED",
     description: "A home for precision, artistry, and the style that defines you.",
-    url: "https://anointed.vercel.app",
+    url: "https://anointedbarberstudio.com",
     siteName: "ANOINTED",
     images: [{ url: "/seo/ogp.jpg", width: 1200, height: 630 }],
     type: "website",

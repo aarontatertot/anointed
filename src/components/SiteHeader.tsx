@@ -108,11 +108,11 @@ export default function SiteHeader() {
       >
         <Link href="/" className="logo-image flex items-center gap-2">
           <Image
-            src="/images/logo-a-mark.png"
+            src="/logo-new.svg"
             alt="Anointed"
             width={32}
             height={32}
-            className="w-8 h-8 object-contain"
+            className="w-8 h-8 object-contain logo-login-animation"
           />
           <Image
             src="/images/neighborhood-logo.svg"

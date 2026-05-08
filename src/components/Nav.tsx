@@ -21,7 +21,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        backgroundColor: isTransparent ? "transparent" : "#EEEFE0",
+        backgroundColor: isTransparent ? "transparent" : "#ebddd9",
         borderBottom: isTransparent ? "none" : "1px solid #D1D8BE",
       }}
     >
@@ -29,7 +29,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/logo-new.svg"
             alt="ANOINTED"
             width={40}
             height={40}
@@ -50,7 +50,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               key={href}
               href={href}
               className="text-[11px] tracking-[0.2em] font-medium transition-colors duration-300 hover:text-sage"
-              style={{ color: isTransparent ? "#EEEFE0" : "#1a1a1a" }}
+              style={{ color: isTransparent ? "#ebddd9" : "#1a1a1a" }}
             >
               {label}
             </Link>
@@ -67,7 +67,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             <span
               key={i}
               className="block w-6 h-px transition-colors duration-300"
-              style={{ backgroundColor: isTransparent ? "#EEEFE0" : "#1a1a1a" }}
+              style={{ backgroundColor: isTransparent ? "#ebddd9" : "#1a1a1a" }}
             />
           ))}
         </button>

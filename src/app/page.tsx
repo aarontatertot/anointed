@@ -28,7 +28,7 @@ const NAV_LINKS = [
 ];
 
 function SageBar() {
-  return <div style={{ width: 40, height: 3, background: "#819A91", marginBottom: 16 }} />;
+  return <div style={{ width: 40, height: 3, background: "#bda49d", marginBottom: 16 }} />;
 }
 
 export default function Home() {
@@ -73,7 +73,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ background: "#0d0d0d", color: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "#0d0d0d", color: "#ebddd9", minHeight: "100vh" }}>
 
       {/* ── FIXED NAV ───────────────────────────────────────────────────── */}
       <nav
@@ -98,7 +98,7 @@ export default function Home() {
           style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
           aria-label="Go to top"
         >
-          <Image src="/images/logo-a-mark-light.png" width={40} height={40} alt="Anointed" />
+          <Image src="/logo-new.svg" width={40} height={40} alt="Anointed" />
         </button>
 
         {/* Desktop links */}
@@ -114,7 +114,7 @@ export default function Home() {
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -133,7 +133,7 @@ export default function Home() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#A1A1AA",
+              color: "#ebddd9",
               textDecoration: "none",
             }}
           >
@@ -150,8 +150,8 @@ export default function Home() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#819A91",
-              border: "1px solid #819A91",
+              color: "#ebddd9",
+              border: "1px solid #ebddd9",
               borderRadius: 40,
               padding: "8px 20px",
               textDecoration: "none",
@@ -176,9 +176,9 @@ export default function Home() {
           }}
           aria-label="Open menu"
         >
-          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
-          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
-          <span style={{ display: "block", width: 16, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#bda49d" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#bda49d" }} />
+          <span style={{ display: "block", width: 16, height: 2, background: "#bda49d" }} />
         </button>
       </nav>
 
@@ -211,7 +211,7 @@ export default function Home() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#71717A",
+              color: "#bda49d",
             }}
           >
             CLOSE ✕
@@ -236,7 +236,7 @@ export default function Home() {
                   fontSize: "clamp(40px, 8vw, 80px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
-                  color: "#889992",
+                  color: "#bda49d",
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -256,7 +256,7 @@ export default function Home() {
                 fontSize: "clamp(40px, 8vw, 80px)",
                 letterSpacing: "-0.02em",
                 textTransform: "uppercase",
-                color: "#889992",
+                color: "#bda49d",
                 textDecoration: "none",
                 lineHeight: 1.1,
               }}
@@ -276,7 +276,7 @@ export default function Home() {
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               color: "#000",
-              background: "#819A91",
+              background: "#ebddd9",
               borderRadius: 40,
               padding: "14px 32px",
               textDecoration: "none",
@@ -318,7 +318,7 @@ export default function Home() {
               fontWeight: 900,
               fontSize: "clamp(72px, 18vw, 180px)",
               textTransform: "uppercase",
-              color: "#EEEFE1",
+              color: "#bda49d",
               letterSpacing: "-0.02em",
               lineHeight: 1,
               margin: 0,
@@ -331,7 +331,7 @@ export default function Home() {
               fontFamily: "'Roboto Mono', monospace",
               fontWeight: 400,
               fontSize: 18,
-              color: "#819A91",
+              color: "#ebddd9",
               marginTop: 8,
             }}
           >
@@ -350,7 +350,7 @@ export default function Home() {
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: "#000",
-                background: "#819A91",
+                background: "#ebddd9",
                 borderRadius: 40,
                 padding: "12px 24px",
                 textDecoration: "none",
@@ -367,9 +367,9 @@ export default function Home() {
                 fontSize: 13,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#819A91",
+                color: "#ebddd9",
                 background: "rgba(0,0,0,0.3)",
-                border: "1px solid #819A91",
+                border: "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "12px 24px",
                 cursor: "pointer",
@@ -393,7 +393,7 @@ export default function Home() {
                 fontWeight: 900,
                 fontSize: "clamp(48px, 7vw, 96px)",
                 textTransform: "uppercase",
-                color: "#889992",
+                color: "#bda49d",
                 lineHeight: 1,
                 letterSpacing: "-0.02em",
                 margin: 0,
@@ -412,15 +412,13 @@ export default function Home() {
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 16,
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 lineHeight: 1.7,
                 marginBottom: 28,
                 maxWidth: 480,
               }}
             >
-              Anointed Studio. &quot;Equipped with belief.&quot; Anointed Studio was built with purpose.
-              Craft taken seriously. Standards that don&apos;t slip. Bringing a level of precision to Utah
-              that the culture deserves. Find out about our barbers, services, address, and working hours.
+              Built with purpose. Craft taken seriously. Standards that don&apos;t slip. Bringing a level of precision to Utah that the culture deserves.
             </p>
             <a
               href={GENERAL_BOOK_URL}
@@ -435,7 +433,7 @@ export default function Home() {
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: "#000",
-                background: "#889992",
+                background: "#ebddd9",
                 borderRadius: 40,
                 padding: "12px 24px",
                 textDecoration: "none",
@@ -448,7 +446,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTION 3: MARQUEE ───────────────────────────────────────────── */}
-      <section style={{ background: "#819A91", padding: "32px 0", textAlign: "center" }}>
+      <section style={{ background: "#bda49d", padding: "32px 0", textAlign: "center" }}>
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
@@ -474,7 +472,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#889992",
+            color: "#bda49d",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -487,12 +485,12 @@ export default function Home() {
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 16,
-            color: "#A1A1AA",
+            color: "#ebddd9",
             marginBottom: 48,
             maxWidth: 560,
           }}
         >
-          From precision cuts to transformative color work, every service is delivered with intention.
+          Every service is executed with intention. No shortcuts. No compromises.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -529,7 +527,7 @@ export default function Home() {
                     fontWeight: 900,
                     fontSize: 28,
                     textTransform: "uppercase",
-                    color: "#889992",
+                    color: "#ebddd9",
                     lineHeight: 1,
                     margin: 0,
                   }}
@@ -541,7 +539,7 @@ export default function Home() {
                     fontFamily: "'Roboto Mono', monospace",
                     fontWeight: 400,
                     fontSize: 13,
-                    color: "#A1A1AA",
+                    color: "#ebddd9",
                     margin: "4px 0 0",
                   }}
                 >
@@ -562,7 +560,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#889992",
+            color: "#bda49d",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -570,33 +568,20 @@ export default function Home() {
         >
           MEET THE TEAM
         </h2>
-        <p
-          style={{
-            fontFamily: "'Roboto Mono', monospace",
-            fontWeight: 400,
-            fontSize: 16,
-            color: "#A1A1AA",
-            marginBottom: 60,
-            maxWidth: 560,
-          }}
-        >
-          Brief description of the team goes in this section, should be about this long.
-        </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {[
             {
               name: "DONAVAN",
-              role: "BARBER · COLOR SPECIALIST",
-              bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
+              role: "FOUNDER · BARBER 20 YEARS BEHIND THE CHAIR",
+              bio: "Bred in LA. Here to set a standard Utah's hair culture has never seen.",
               image: "/images/studio/barber-chair-single.jpg",
               bookLabel: "BOOK WITH DONAVAN",
               bookHref: DONAVAN_BOOK_URL,
             },
             {
               name: "ADLEY",
-              role: "BARBER",
-              bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
+              role: "BARBER • 5+ YEARS BEHIND THE CHAIR",
+              bio: "Utah-raised, detail-driven, and focused on one thing — a consistent, top-tier experience every time you sit down.",
               image: "/images/studio/portrait-street.jpg",
               bookLabel: "BOOK WITH ADLEY",
               bookHref: ADLEY_BOOK_URL,
@@ -624,7 +609,7 @@ export default function Home() {
                   fontWeight: 900,
                   fontSize: 32,
                   textTransform: "uppercase",
-                  color: "#889992",
+                  color: "#bda49d",
                   margin: "0 0 6px",
                 }}
               >
@@ -637,7 +622,7 @@ export default function Home() {
                   fontSize: 12,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#A1A1AA",
+                  color: "#ebddd9",
                   margin: "0 0 16px",
                 }}
               >
@@ -648,7 +633,7 @@ export default function Home() {
                   fontFamily: "'Roboto Mono', monospace",
                   fontWeight: 400,
                   fontSize: 15,
-                  color: "#A1A1AA",
+                  color: "#ebddd9",
                   lineHeight: 1.6,
                   margin: "0 0 24px",
                   maxWidth: 360,
@@ -663,7 +648,7 @@ export default function Home() {
                 className="btn-outline"
                 style={{
                   display: "inline-block",
-                  border: "1px solid #819A91",
+                  border: "1px solid #ebddd9",
                   borderRadius: 40,
                   padding: "10px 24px",
                   fontFamily: "'Roboto Mono', monospace",
@@ -671,7 +656,7 @@ export default function Home() {
                   fontSize: 12,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#819A91",
+                  color: "#ebddd9",
                   textDecoration: "none",
                 }}
               >
@@ -691,7 +676,7 @@ export default function Home() {
             fontWeight: 900,
             fontSize: "clamp(48px, 7vw, 96px)",
             textTransform: "uppercase",
-            color: "#889992",
+            color: "#bda49d",
             lineHeight: 1,
             letterSpacing: "-0.02em",
             marginBottom: 16,
@@ -704,13 +689,12 @@ export default function Home() {
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 16,
-            color: "#A1A1AA",
+            color: "#ebddd9",
             marginBottom: 48,
             maxWidth: 600,
           }}
         >
-          Catch up on our latest work. From editorial cuts to color transformations, discover the
-          artistry behind every appointment.
+          The work speaks. Browse the latest from the chair.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
@@ -767,7 +751,7 @@ export default function Home() {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "#889992",
+              color: "#ebddd9",
               fontSize: 24,
               zIndex: 51,
               lineHeight: 1,
@@ -787,7 +771,7 @@ export default function Home() {
               fontFamily: "'Roboto Mono', monospace",
               fontWeight: 400,
               fontSize: 13,
-              color: "#A1A1AA",
+              color: "#ebddd9",
               letterSpacing: "0.1em",
               zIndex: 51,
             }}
@@ -815,12 +799,12 @@ export default function Home() {
               style={{
                 flexShrink: 0,
                 background: "none",
-                border: "1px solid #889992",
+                border: "1px solid #ebddd9",
                 borderRadius: "50%",
                 width: 48,
                 height: 48,
                 cursor: "pointer",
-                color: "#889992",
+                color: "#ebddd9",
                 fontSize: 20,
                 display: "flex",
                 alignItems: "center",
@@ -857,12 +841,12 @@ export default function Home() {
               style={{
                 flexShrink: 0,
                 background: "none",
-                border: "1px solid #889992",
+                border: "1px solid #ebddd9",
                 borderRadius: "50%",
                 width: 48,
                 height: 48,
                 cursor: "pointer",
-                color: "#889992",
+                color: "#ebddd9",
                 fontSize: 20,
                 display: "flex",
                 alignItems: "center",
@@ -882,14 +866,14 @@ export default function Home() {
           {/* Left */}
           <div>
             <div style={{ marginBottom: 16, opacity: 0.4, lineHeight: 0 }}>
-              <Image src="/images/logo-a-mark-light.png" width={60} height={60} alt="Anointed" />
+              <Image src="/logo-new.svg" width={60} height={60} alt="Anointed" />
             </div>
             <p
               style={{
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
-                color: "#71717A",
+                color: "#bda49d",
               }}
             >
               Equipped with belief.
@@ -916,7 +900,7 @@ export default function Home() {
                     fontSize: 13,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
-                    color: "#A1A1AA",
+                    color: "#ebddd9",
                     background: "none",
                     border: "none",
                     cursor: "pointer",
@@ -935,7 +919,7 @@ export default function Home() {
                   fontSize: 13,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#A1A1AA",
+                  color: "#ebddd9",
                   textDecoration: "none",
                 }}
               >
@@ -953,8 +937,8 @@ export default function Home() {
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#819A91",
-                border: "1px solid #819A91",
+                color: "#ebddd9",
+                border: "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "8px 20px",
                 textDecoration: "none",
@@ -972,7 +956,7 @@ export default function Home() {
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 12,
-            color: "#52525B",
+            color: "#ebddd9",
             letterSpacing: "0.05em",
           }}
         >

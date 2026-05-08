@@ -15,7 +15,7 @@ const NAV_LINKS = [
 ];
 
 function SageBar() {
-  return <div style={{ width: 40, height: 3, background: "#819A91", marginBottom: 16 }} />;
+  return <div style={{ width: 40, height: 3, background: "#bda49d", marginBottom: 16 }} />;
 }
 
 export default function ContactPage() {
@@ -29,7 +29,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div style={{ background: "#0d0d0d", color: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "#0d0d0d", color: "#ebddd9", minHeight: "100vh" }}>
 
       {/* ── FIXED NAV ───────────────────────────────────────────────────── */}
       <nav
@@ -49,7 +49,7 @@ export default function ContactPage() {
         }}
       >
         <Link href="/" style={{ lineHeight: 0 }}>
-          <Image src="/images/logo-a-mark-light.png" width={40} height={40} alt="Anointed" />
+          <Image src="/logo-new.svg" width={40} height={40} alt="Anointed" />
         </Link>
 
         {/* Desktop links */}
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 textDecoration: "none",
               }}
             >
@@ -81,7 +81,7 @@ export default function ContactPage() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#fff",
+              color: "#ebddd9",
               textDecoration: "none",
             }}
           >
@@ -98,8 +98,8 @@ export default function ContactPage() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#819A91",
-              border: "1px solid #819A91",
+              color: "#ebddd9",
+              border: "1px solid #ebddd9",
               borderRadius: 40,
               padding: "8px 20px",
               textDecoration: "none",
@@ -124,9 +124,9 @@ export default function ContactPage() {
           }}
           aria-label="Open menu"
         >
-          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
-          <span style={{ display: "block", width: 24, height: 2, background: "#889992" }} />
-          <span style={{ display: "block", width: 16, height: 2, background: "#889992" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#bda49d" }} />
+          <span style={{ display: "block", width: 24, height: 2, background: "#bda49d" }} />
+          <span style={{ display: "block", width: 16, height: 2, background: "#bda49d" }} />
         </button>
       </nav>
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
               fontSize: 12,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#71717A",
+              color: "#bda49d",
             }}
           >
             CLOSE ✕
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   fontSize: "clamp(40px, 8vw, 80px)",
                   letterSpacing: "-0.02em",
                   textTransform: "uppercase",
-                  color: "#889992",
+                  color: "#bda49d",
                   textDecoration: "none",
                   lineHeight: 1.1,
                 }}
@@ -195,7 +195,7 @@ export default function ContactPage() {
                 fontSize: "clamp(40px, 8vw, 80px)",
                 letterSpacing: "-0.02em",
                 textTransform: "uppercase",
-                color: "#889992",
+                color: "#bda49d",
                 textDecoration: "none",
                 lineHeight: 1.1,
               }}
@@ -215,7 +215,7 @@ export default function ContactPage() {
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               color: "#000",
-              background: "#819A91",
+              background: "#ebddd9",
               borderRadius: 40,
               padding: "14px 32px",
               textDecoration: "none",
@@ -239,7 +239,7 @@ export default function ContactPage() {
                 fontWeight: 900,
                 fontSize: "clamp(48px, 7vw, 96px)",
                 textTransform: "uppercase",
-                color: "#889992",
+                color: "#bda49d",
                 lineHeight: 1,
                 letterSpacing: "-0.02em",
                 marginBottom: 48,
@@ -253,7 +253,7 @@ export default function ContactPage() {
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 marginBottom: 8,
               }}
             >
@@ -264,7 +264,7 @@ export default function ContactPage() {
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 marginBottom: 32,
               }}
             >
@@ -289,8 +289,8 @@ export default function ContactPage() {
                     fontSize: 11,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#A1A1AA",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    color: "#ebddd9",
+                    border: "1px solid #ebddd9",
                     borderRadius: 40,
                     padding: "10px 20px",
                     textDecoration: "none",
@@ -310,7 +310,7 @@ export default function ContactPage() {
                 fontWeight: 900,
                 fontSize: 28,
                 textTransform: "uppercase",
-                color: "#889992",
+                color: "#bda49d",
                 marginBottom: 12,
                 letterSpacing: "-0.01em",
               }}
@@ -322,13 +322,12 @@ export default function ContactPage() {
                 fontFamily: "'Roboto Mono', monospace",
                 fontWeight: 400,
                 fontSize: 15,
-                color: "#A1A1AA",
+                color: "#ebddd9",
                 lineHeight: 1.7,
                 marginBottom: 40,
               }}
             >
-              Whether you&apos;re booking your first visit, looking to collaborate, or just have a
-              question — we&apos;re here. Reach out and let&apos;s start a conversation.
+              Questions, collaborations, or anything else — drop us a line and we&apos;ll get back to you.
             </p>
 
             <form style={{ display: "flex", flexDirection: "column", gap: 28 }}>
@@ -345,7 +344,7 @@ export default function ContactPage() {
                   fontSize: 13,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#fff",
+                  color: "#ebddd9",
                   padding: "10px 0",
                   width: "100%",
                 }}
@@ -363,7 +362,7 @@ export default function ContactPage() {
                   fontSize: 13,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#fff",
+                  color: "#ebddd9",
                   padding: "10px 0",
                   width: "100%",
                 }}
@@ -381,7 +380,7 @@ export default function ContactPage() {
                   fontSize: 13,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#fff",
+                  color: "#ebddd9",
                   padding: "10px 0",
                   width: "100%",
                   resize: "none",
@@ -392,7 +391,7 @@ export default function ContactPage() {
                 className="btn-solid"
                 style={{
                   alignSelf: "flex-start",
-                  background: "#819A91",
+                  background: "#ebddd9",
                   border: "none",
                   borderRadius: 40,
                   padding: "12px 28px",
@@ -436,9 +435,9 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start" style={{ marginBottom: 32 }}>
           <div>
             <div style={{ marginBottom: 12, opacity: 0.4, lineHeight: 0 }}>
-              <Image src="/images/logo-a-mark-light.png" width={60} height={60} alt="Anointed" />
+              <Image src="/logo-new.svg" width={60} height={60} alt="Anointed" />
             </div>
-            <p style={{ fontFamily: "'Roboto Mono', monospace", fontWeight: 400, fontSize: 15, color: "#71717A" }}>
+            <p style={{ fontFamily: "'Roboto Mono', monospace", fontWeight: 400, fontSize: 15, color: "#bda49d" }}>
               Equipped with belief.
             </p>
           </div>
@@ -457,7 +456,7 @@ export default function ContactPage() {
                   fontSize: 13,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#A1A1AA",
+                  color: "#ebddd9",
                   textDecoration: "none",
                 }}
               >
@@ -475,8 +474,8 @@ export default function ContactPage() {
                 fontSize: 12,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "#819A91",
-                border: "1px solid #819A91",
+                color: "#ebddd9",
+                border: "1px solid #ebddd9",
                 borderRadius: 40,
                 padding: "8px 20px",
                 textDecoration: "none",
@@ -493,7 +492,7 @@ export default function ContactPage() {
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: 400,
             fontSize: 12,
-            color: "#52525B",
+            color: "#ebddd9",
             letterSpacing: "0.05em",
           }}
         >
