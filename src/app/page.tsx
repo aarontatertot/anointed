@@ -43,7 +43,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setNavScrolled(window.scrollY > window.innerHeight * 0.8);
+      setNavScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);

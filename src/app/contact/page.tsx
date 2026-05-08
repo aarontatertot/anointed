@@ -26,7 +26,7 @@ export default function ContactPage() {
   const [footerBookHovered, setFooterBookHovered] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setNavScrolled(window.scrollY > 60);
+    const handleScroll = () => setNavScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
