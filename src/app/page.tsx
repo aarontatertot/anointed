@@ -874,9 +874,9 @@ export default function Home() {
       <footer style={{ background: "#0d0d0d", padding: "80px 36px 40px" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start" style={{ marginBottom: 48 }}>
           {/* Left */}
-          <div>
-            <div style={{ marginBottom: 16, opacity: 1, lineHeight: 0 }}>
-              <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+            <div style={{ marginBottom: 16, lineHeight: 0 }}>
+              <Image src="/logo-new.svg" width={180} height={180} alt="Anointed" style={{ display: "block" }} />
             </div>
             <p
               style={{
