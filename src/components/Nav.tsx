@@ -10,7 +10,8 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
   useEffect(() => {
     if (!transparent) return;
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [transparent]);
