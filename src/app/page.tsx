@@ -503,7 +503,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTION 3b: EVENTS (id="events") ─────────────────────────────── */}
-      <section id="events" style={{ background: "#0d0d0d", padding: "100px 36px" }}>
+      <section id="events" style={{ background: "#18181B", padding: "100px 36px" }}>
         <SageBar />
         <h2
           style={{
@@ -546,7 +546,7 @@ export default function Home() {
               description: "Come through, meet the team, watch live demos, and grab a complimentary trim.",
             },
           ].map((event) => (
-            <div key={event.headline} style={{ background: "#0d0d0d", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <div key={event.headline} style={{ background: "#18181B", border: "1px solid rgba(255,255,255,0.08)" }}>
               {/* Placeholder image */}
               <div
                 style={{
@@ -670,9 +670,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { name: "HAIRCUTS", price: "Starting at $70", image: "/images/service-haircuts.jpg" },
-            { name: "SHAVES", price: "Starting at $50", image: "/images/service-shave.jpg" },
-            { name: "COLOR", price: "Starting at $80", image: "/images/service-color.jpg" },
+            { name: "HAIRCUTS", price: "Starting at $70", image: "/images/service-haircuts.jpg", grayscale: true },
+            { name: "SHAVES", price: "Starting at $50", image: "/images/service-shave.jpg", grayscale: true },
+            { name: "COLOR", price: "Starting at $80", image: "/images/service-color.jpg", grayscale: false },
           ].map((service) => (
             <div
               key={service.name}
@@ -686,7 +686,7 @@ export default function Home() {
                 src={service.image}
                 alt={service.name}
                 fill
-                style={{ objectFit: "cover", filter: "grayscale(100%)" }}
+                style={{ objectFit: "cover", filter: service.grayscale ? "grayscale(100%)" : "none" }}
               />
               <div
                 style={{
@@ -749,7 +749,7 @@ export default function Home() {
               name: "DONAVAN",
               role: "FOUNDER · BARBER 20 YEARS BEHIND THE CHAIR",
               bio: "Bred in LA. Here to set a standard Utah's hair culture has never seen.",
-              image: "/images/donavan-headshot.jpg",
+              image: "/images/donavan-headshot-new.png",
               bookLabel: "BOOK WITH DONAVAN",
               bookHref: DONAVAN_BOOK_URL,
             },

@@ -7,7 +7,7 @@ const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-bar
 export default function TeamPage() {
   const team = [
     {
-      image: "/images/donavan-headshot.jpg",
+      image: "/images/donavan-headshot-new.png",
       name: "DONAVAN",
       role: "BARBER · COLOR SPECIALIST",
       bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
