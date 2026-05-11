@@ -503,7 +503,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTION 3b: EVENTS (id="events") ─────────────────────────────── */}
-      <section id="events" style={{ background: "#18181B", padding: "100px 36px" }}>
+      <section id="events" style={{ background: "#000", padding: "100px 36px" }}>
         <SageBar />
         <h2
           style={{
