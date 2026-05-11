@@ -46,6 +46,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             { label: "SERVICES", href: "/services" },
             { label: "BOOK", href: "/book" },
             { label: "ABOUT", href: "/about" },
+            { label: "EVENTS", href: "/#events" },
           ].map(({ label, href }) => (
             <Link
               key={href}
@@ -82,6 +83,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             { label: "SERVICES", href: "/services" },
             { label: "BOOK", href: "/book" },
             { label: "ABOUT", href: "/about" },
+            { label: "EVENTS", href: "/#events" },
           ].map(({ label, href }) => (
             <Link
               key={href}

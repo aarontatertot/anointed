@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const DONOVAN_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/donavan-duelas-55/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
-const ADLEY_BOOK_URL = "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/adley-prescott-2/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
-const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+const DONOVAN_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake/barber/donavan-duelas-55";
+const ADLEY_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake/barber/adley-prescott-2";
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake";
 
 export default function TeamPage() {
   const team = [
     {
-      image: "/images/studio/barber-chair-single.jpg",
+      image: "/images/donavan-headshot.jpg",
       name: "DONAVAN",
       role: "BARBER · COLOR SPECIALIST",
       bio: "10 years crafting precision fades and tapered cuts. Specializes in textured hair and editorial styling.",
@@ -15,7 +15,7 @@ export default function TeamPage() {
       bookHref: DONOVAN_BOOK_URL,
     },
     {
-      image: "/images/studio/barber-chairs-wide.jpg",
+      image: "/images/adley-headshot.jpg",
       name: "ADLEY",
       role: "BARBER",
       bio: "Expert colorist with a background in fashion. Known for seamless blends and bold transformations.",
@@ -36,6 +36,7 @@ export default function TeamPage() {
           {[
             { label: "HOME", href: "/" },
             { label: "ABOUT", href: "/#about" },
+            { label: "EVENTS", href: "/#events" },
             { label: "SERVICES", href: "/#services" },
             { label: "TEAM", href: "/team" },
           ].map((item) => (

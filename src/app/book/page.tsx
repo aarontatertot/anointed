@@ -28,7 +28,7 @@ export default function Book() {
           select your service, stylist, and preferred time.
         </p>
         <a
-          href="https://squire.com"
+          href="https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-16 py-5 text-[11px] tracking-[0.35em] uppercase border transition-all duration-300 hover:bg-ink hover:text-cream"

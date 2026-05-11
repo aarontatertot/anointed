@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+const GENERAL_BOOK_URL = "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake";
 
 export default function HomeV2Page() {
   return (
@@ -16,6 +16,7 @@ export default function HomeV2Page() {
             { label: "HOME", href: "/" },
             { label: "HOME V.2", href: "/home-v2" },
             { label: "ABOUT", href: "/about" },
+            { label: "EVENTS", href: "/#events" },
             { label: "SERVICES", href: "/services" },
             { label: "TEAM", href: "/team" },
           ].map((item) => (

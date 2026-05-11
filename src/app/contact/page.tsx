@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const GENERAL_BOOK_URL =
-  "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+  "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake";
 
 const NAV_LINKS = [
   { label: "HOME", href: "/#home" },
   { label: "ABOUT", href: "/#about" },
+  { label: "EVENTS", href: "/#events" },
   { label: "SERVICES", href: "/#services" },
   { label: "TEAM", href: "/#team" },
   { label: "GALLERY", href: "/#gallery" },
