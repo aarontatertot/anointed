@@ -4,11 +4,11 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
 const GENERAL_BOOK_URL =
-  "https://getsquire.com/discover/barbershop/anointed-studio-north-salt-lake";
+  "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake";
 const DONAVAN_BOOK_URL =
-  "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/donavan-duelas-55/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+  "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake/barber/donavan-duelas-55";
 const ADLEY_BOOK_URL =
-  "https://getsquire.com/booking/book/anointed-studio-north-salt-lake/barber/adley-prescott-2/services?utm_source=city-pages&utm_campaign=city-pages&utm_content=barber-card";
+  "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake/barber/adley-prescott-2";
 
 const GALLERY_IMAGES = [
   { src: "/images/studio/barber-chairs-wide.jpg", alt: "Anointed Studio" },
@@ -22,9 +22,15 @@ const GALLERY_IMAGES = [
 const NAV_LINKS = [
   { label: "HOME", id: "home" },
   { label: "ABOUT", id: "about" },
+  { label: "EVENTS", id: "events" },
   { label: "SERVICES", id: "services" },
   { label: "TEAM", id: "team" },
   { label: "GALLERY", id: "gallery" },
+];
+
+const HERO_IMAGES = [
+  { src: "/images/hero-1-bw.jpg", alt: "Anointed Studio" },
+  { src: "/images/hero-2-bw.jpg", alt: "Anointed Studio" },
 ];
 
 function SageBar() {
@@ -40,6 +46,7 @@ export default function Home() {
   const [heroGalleryHovered, setHeroGalleryHovered] = useState(false);
   const [teamHoveredIdx, setTeamHoveredIdx] = useState<number | null>(null);
   const [footerBookHovered, setFooterBookHovered] = useState(false);
+  const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +55,13 @@ export default function Home() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % HERO_IMAGES.length);
+    }, 6000);
+    return () => clearInterval(timer);
   }, []);
 
   const handleKeyDown = useCallback(
@@ -309,20 +323,32 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        {/* Background image */}
+        {/* Slideshow background */}
         <div style={{ position: "absolute", inset: 0 }}>
-          <Image
-            src="/images/studio/barber-chairs-wide.jpg"
-            alt="Anointed Studio"
-            fill
-            style={{ objectFit: "cover", objectPosition: "center" }}
-            priority
-          />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)" }} />
+          {HERO_IMAGES.map((img, idx) => (
+            <div
+              key={img.src}
+              style={{
+                position: "absolute",
+                inset: 0,
+                opacity: heroIndex === idx ? 1 : 0,
+                transition: "opacity 1.2s ease-in-out",
+              }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                priority={idx === 0}
+              />
+            </div>
+          ))}
+          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)", zIndex: 1 }} />
         </div>
 
         {/* Hero content */}
-        <div style={{ position: "relative", zIndex: 1, paddingLeft: "clamp(16px, 5vw, 60px)", paddingRight: "clamp(20px, 6vw, 60px)", boxSizing: "border-box", width: "100%" }}>
+        <div style={{ position: "relative", zIndex: 2, paddingLeft: "clamp(16px, 5vw, 60px)", paddingRight: "clamp(20px, 6vw, 60px)", boxSizing: "border-box", width: "100%" }}>
           <h1
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -476,6 +502,142 @@ export default function Home() {
         </p>
       </section>
 
+      {/* ── SECTION 3b: EVENTS (id="events") ─────────────────────────────── */}
+      <section id="events" style={{ background: "#111", padding: "100px 36px" }}>
+        <SageBar />
+        <h2
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 900,
+            fontSize: "clamp(48px, 7vw, 96px)",
+            textTransform: "uppercase",
+            color: "#bda49d",
+            lineHeight: 1,
+            letterSpacing: "-0.02em",
+            marginBottom: 8,
+          }}
+        >
+          EVENTS
+        </h2>
+        <p
+          style={{
+            fontFamily: "'Roboto Mono', monospace",
+            fontWeight: 400,
+            fontSize: 16,
+            color: "#ebddd9",
+            marginBottom: 56,
+            maxWidth: 560,
+          }}
+        >
+          Upcoming classes, demos, and events. Reserve your spot.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {
+              headline: "Barbering Masterclass",
+              date: "June 14, 2026",
+              time: "2:00 PM – 5:00 PM",
+              description: "A hands-on demo session covering advanced clipper techniques and fade transitions.",
+            },
+            {
+              headline: "Open Shop Night",
+              date: "June 28, 2026",
+              time: "6:00 PM – 9:00 PM",
+              description: "Come through, meet the team, watch live demos, and grab a complimentary trim.",
+            },
+          ].map((event) => (
+            <div key={event.headline} style={{ background: "#0d0d0d", border: "1px solid rgba(255,255,255,0.08)" }}>
+              {/* Placeholder image */}
+              <div
+                style={{
+                  width: "100%",
+                  height: 200,
+                  background: "#2a2a2a",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <span style={{ fontFamily: "'Roboto Mono', monospace", fontSize: 12, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase" }}>Image Coming Soon</span>
+              </div>
+              <div style={{ padding: "24px 28px 28px" }}>
+                <p
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 900,
+                    fontSize: 24,
+                    textTransform: "uppercase",
+                    color: "#ebddd9",
+                    margin: "0 0 8px",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {event.headline}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "'Roboto Mono', monospace",
+                    fontWeight: 400,
+                    fontSize: 12,
+                    color: "#bda49d",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    margin: "0 0 4px",
+                  }}
+                >
+                  {event.date}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "'Roboto Mono', monospace",
+                    fontWeight: 400,
+                    fontSize: 12,
+                    color: "#bda49d",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    margin: "0 0 16px",
+                  }}
+                >
+                  {event.time}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "'Roboto Mono', monospace",
+                    fontWeight: 400,
+                    fontSize: 14,
+                    color: "#ebddd9",
+                    lineHeight: 1.6,
+                    margin: "0 0 24px",
+                  }}
+                >
+                  {event.description}
+                </p>
+                <a
+                  href={GENERAL_BOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    fontFamily: "'Roboto Mono', monospace",
+                    fontWeight: 500,
+                    fontSize: 12,
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                    color: "#000",
+                    background: "#bda49d",
+                    borderRadius: 40,
+                    padding: "10px 24px",
+                    textDecoration: "none",
+                  }}
+                >
+                  RESERVE SPOT
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── SECTION 4: SERVICES (id="services") ─────────────────────────── */}
       <section id="services" style={{ background: "#0d0d0d", padding: "100px 36px" }}>
         <SageBar />
@@ -508,9 +670,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { name: "HAIRCUTS", price: "Starting at $70", image: "/images/studio/barber-chair-single.jpg" },
-            { name: "SHAVES", price: "Starting at $50", image: "/images/studio/portrait-street.jpg" },
-            { name: "COLOR", price: "Starting at $80", image: "/images/studio/street-scene.jpg" },
+            { name: "HAIRCUTS", price: "Starting at $70", image: "/images/service-haircuts.jpg" },
+            { name: "SHAVES", price: "Starting at $50", image: "/images/service-shave.jpg" },
+            { name: "COLOR", price: "Starting at $80", image: "/images/service-color.jpg" },
           ].map((service) => (
             <div
               key={service.name}
@@ -587,7 +749,7 @@ export default function Home() {
               name: "DONAVAN",
               role: "FOUNDER · BARBER 20 YEARS BEHIND THE CHAIR",
               bio: "Bred in LA. Here to set a standard Utah's hair culture has never seen.",
-              image: "/images/studio/barber-chair-single.jpg",
+              image: "/images/donavan-headshot.jpg",
               bookLabel: "BOOK WITH DONAVAN",
               bookHref: DONAVAN_BOOK_URL,
             },
@@ -595,7 +757,7 @@ export default function Home() {
               name: "ADLEY",
               role: "BARBER • 5+ YEARS BEHIND THE CHAIR",
               bio: "Utah-raised, detail-driven, and focused on one thing — a consistent, top-tier experience every time you sit down.",
-              image: "/images/studio/portrait-street.jpg",
+              image: "/images/adley-headshot.jpg",
               bookLabel: "BOOK WITH ADLEY",
               bookHref: ADLEY_BOOK_URL,
             },
@@ -604,7 +766,7 @@ export default function Home() {
               <div
                 style={{
                   position: "relative",
-                  height: 200,
+                  height: 320,
                   overflow: "hidden",
                   marginBottom: 24,
                 }}
