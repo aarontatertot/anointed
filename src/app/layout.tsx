@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anointedbarbershop.com"),
-  title: "ANOINTED — Premium Hair Studio",
+  title: "Anointed - Equipped with Belief",
   description: "A home for precision, artistry, and the style that defines you.",
   alternates: {
     canonical: "https://anointedbarbershop.com",
