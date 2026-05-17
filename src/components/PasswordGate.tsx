@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import AnimatedAnointedLogo from "@/components/AnimatedAnointedLogo";
 
 const CORRECT_PASSWORD = "anointed2026";
 const STORAGE_KEY = "anointed_access";
@@ -33,17 +33,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
 
   return (
     <main className="min-h-screen bg-black flex flex-col items-center justify-center px-4">
-      <style>{`@keyframes logoIntro { 0% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.3) rotate(0deg); } 100% { transform: scale(1.3) rotate(360deg); } }`}</style>
       <div className="flex flex-col items-center gap-6 w-full max-w-xs">
-        <Image
-          src="/logo-new.svg"
-          alt="Anointed Studio"
-          width={128}
-          height={128}
-          className="w-32 h-auto"
-          priority
-          style={{ animation: "logoIntro 2s ease-in-out forwards" }}
-        />
+        <AnimatedAnointedLogo size={80} />
         <p className="text-neutral-400 text-sm tracking-widest uppercase font-medium"
           style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}>
           ANOINTED STUDIO

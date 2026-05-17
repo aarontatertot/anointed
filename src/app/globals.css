@@ -81,3 +81,59 @@ img {
     transform: scale(1) rotate(360deg);
   }
 }
+
+.anointed-logo-mark {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+  contain: layout paint;
+}
+
+.anointed-logo-mark__background,
+.anointed-logo-mark__contents {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.anointed-logo-mark__background {
+  opacity: 1;
+}
+
+.anointed-logo-mark--animated .anointed-logo-mark__contents {
+  opacity: 0;
+  transform: scale(0.96);
+  transform-origin: center;
+  clip-path: circle(0% at 50% 50%);
+  animation: anointed-logo-contents-reveal 3.6s cubic-bezier(0.22, 1, 0.36, 1) 600ms forwards;
+}
+
+@keyframes anointed-logo-contents-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+    clip-path: circle(0% at 50% 50%);
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    clip-path: circle(76% at 50% 50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anointed-logo-mark--animated .anointed-logo-mark__contents {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+}
