@@ -33,8 +33,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
 
   return (
     <main className="min-h-screen bg-black flex flex-col items-center justify-center px-4">
-      <div className="flex flex-col items-center gap-6 w-full max-w-xs">
-        <AnimatedAnointedLogo size={80} />
+      <div className="flex flex-col items-center gap-6 w-full" style={{ maxWidth: "min(480px, 90vw)" }}>
+        <AnimatedAnointedLogo size={480} className="w-full h-auto" />
         <p className="text-neutral-400 text-sm tracking-widest uppercase font-medium"
           style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}>
           ANOINTED STUDIO
