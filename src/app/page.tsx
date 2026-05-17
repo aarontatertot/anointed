@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
+import AnimatedAnointedLogo from "@/components/AnimatedAnointedLogo";
 
 const GENERAL_BOOK_URL =
   "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake";
@@ -11,12 +12,16 @@ const ADLEY_BOOK_URL =
   "https://getsquire.com/discover/barbershop/anointed-barbershop-north-salt-lake/barber/adley-prescott-2";
 
 const GALLERY_IMAGES = [
-  { src: "/images/studio/barber-chairs-wide.jpg", alt: "Anointed Studio" },
-  { src: "/images/studio/barber-chair-single.jpg", alt: "Barber Chair" },
-  { src: "/images/studio/portrait-street.jpg", alt: "Portrait" },
-  { src: "/images/studio/barber-chair-side.jpg", alt: "Barber Chair Side" },
-  { src: "/images/studio/street-scene.jpg", alt: "Street Scene" },
-  { src: "/images/studio/barber-chairs-wide.jpg", alt: "Anointed Studio" },
+  { src: "/images/gallery/gallery-01.webp", alt: "Blue color + fade" },
+  { src: "/images/gallery/gallery-02.webp", alt: "Curly top + taper" },
+  { src: "/images/gallery/gallery-03.webp", alt: "High fade with part" },
+  { src: "/images/gallery/gallery-04.webp", alt: "Platinum side sweep" },
+  { src: "/images/gallery/gallery-05.webp", alt: "Blonde curls + fade" },
+  { src: "/images/gallery/gallery-06.webp", alt: "Teal color + fade" },
+  { src: "/images/gallery/gallery-07.webp", alt: "Galaxy color" },
+  { src: "/images/gallery/gallery-08.webp", alt: "Vivid color cut" },
+  { src: "/images/gallery/gallery-09.webp", alt: "Curly top + mid fade" },
+  { src: "/images/gallery/gallery-10.webp", alt: "Blue teal + star design" },
 ];
 
 const NAV_LINKS = [
@@ -121,7 +126,7 @@ export default function Home() {
           style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
           aria-label="Go to top"
         >
-          <Image src="/logo-new.svg" width={80} height={80} alt="Anointed" />
+          <AnimatedAnointedLogo size={80} />
         </button>
 
         {/* Desktop links */}
