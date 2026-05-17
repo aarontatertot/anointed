@@ -880,7 +880,7 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
-          {GALLERY_IMAGES.map((img, idx) => (
+          {GALLERY_IMAGES.slice(0, 6).map((img, idx) => (
             <button
               key={idx}
               onClick={() => openModal(idx)}
